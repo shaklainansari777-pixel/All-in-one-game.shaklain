@@ -9,158 +9,29 @@
 
     <meta name="google-site-verification" content="nXH9ScCwq5O2jmMCkDbRsoH01-i2h807f12kUi4G5d4">
 
-    <meta name="description" content="All-in-one-game.shaklain - Discover multiple fun and exciting Android games in one app. Download All-in-One Games and start playing today.">
+    <meta name="description"
+        content="All-in-one-game.shaklain - Discover multiple fun and exciting Android games in one app. Download All-in-One Games and start playing today.">
 
-    <meta name="keywords" content="All-in-one-game.shaklain, All-in-One Games, Android games, free games, mobile games, APK">
+    <meta name="keywords"
+        content="All-in-one-game.shaklain, All-in-One Games, Android games, free games, mobile games, APK">
 
     <meta name="author" content="All-in-One Games">
 
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="All-in-one-game.shaklain - All-in-One Games">
-    <meta property="og:description" content="Discover multiple fun and exciting Android games in one app.">
+    <meta property="og:title"
+        content="All-in-one-game.shaklain - All-in-One Games">
+
+    <meta property="og:description"
+        content="Discover multiple fun and exciting Android games in one app.">
+
     <meta property="og:type" content="website">
 
     <style>
-}/* =========================
-   RATINGS & REVIEWS
-========================= */
 
-.reviews-section {
-    background: #080b12;
-}
-
-.rating-box {
-    max-width: 850px;
-    margin: auto;
-    background: linear-gradient(145deg, #121927, #0d131f);
-    border: 1px solid #263653;
-    border-radius: 20px;
-    padding: 35px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-}
-
-.rating-summary {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
-
-.rating-number {
-    text-align: center;
-}
-
-.rating-number strong {
-    display: block;
-    font-size: 48px;
-    color: #ffffff;
-}
-
-.stars {
-    color: #4da3ff;
-    font-size: 28px;
-    letter-spacing: 3px;
-}
-
-.rating-number p {
-    color: #8994a6;
-    font-size: 14px;
-}
-
-.review-form {
-    display: grid;
-    gap: 15px;
-}
-
-.review-form input,
-.review-form textarea {
-    width: 100%;
-    padding: 14px 16px;
-    border-radius: 10px;
-    border: 1px solid #293852;
-    background: #0b101b;
-    color: #ffffff;
-    font-size: 15px;
-    outline: none;
-}
-
-.review-form input:focus,
-.review-form textarea:focus {
-    border-color: #4da3ff;
-}
-
-.review-form textarea {
-    min-height: 110px;
-    resize: vertical;
-}
-
-.star-selector {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin: 5px 0;
-}
-
-.star-selector button {
-    background: transparent;
-    border: none;
-    color: #39465c;
-    font-size: 32px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.star-selector button:hover,
-.star-selector button.active {
-    color: #4da3ff;
-    transform: scale(1.12);
-}
-
-.submit-review {
-    border: none;
-    background: #4da3ff;
-    color: #ffffff;
-    padding: 14px 25px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.submit-review:hover {
-    background: #2563eb;
-    transform: translateY(-2px);
-}
-
-.reviews-list {
-    margin-top: 30px;
-    display: grid;
-    gap: 15px;
-}
-
-.review-card {
-    background: #0b101b;
-    border: 1px solid #202d43;
-    border-radius: 14px;
-    padding: 20px;
-}
-
-.review-card strong {
-    color: #ffffff;
-}
-
-.review-card .review-stars {
-    color: #4da3ff;
-    margin: 5px 0;
-}
-
-.review-card p {
-    color: #aeb8c7;
-}
+        /* =========================
+           RESET
+        ========================== */
 
         * {
             margin: 0;
@@ -174,9 +45,80 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #080b12;
+            background: #05070d;
             color: #ffffff;
             line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           ANIMATED BACKGROUND
+        ========================== */
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -3;
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(37, 99, 235, 0.20),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 30%,
+                    rgba(0, 180, 255, 0.13),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 50% 90%,
+                    rgba(29, 78, 216, 0.15),
+                    transparent 30%
+                );
+
+            animation: backgroundMove 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes backgroundMove {
+
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.15);
+            }
+        }
+
+        /* glowing grid */
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            pointer-events: none;
+
+            background-image:
+                linear-gradient(
+                    rgba(59, 130, 246, 0.035) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(59, 130, 246, 0.035) 1px,
+                    transparent 1px
+                );
+
+            background-size: 50px 50px;
+
+            mask-image: linear-gradient(
+                to bottom,
+                black,
+                transparent
+            );
         }
 
         .container {
@@ -186,31 +128,31 @@
         }
 
         /* =========================
-           PREMIUM LOGO
+           TOP LOGO
         ========================== */
 
         .top-logo {
-            .top-logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 9999;
+            position: absolute;
+            top: 22px;
+            left: 25px;
 
-    display: flex;
-    align-items: center;
-    gap: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
 
-    text-decoration: none;
+            text-decoration: none;
+            z-index: 9999;
 
-    visibility: visible;
-    opacity: 1;
-}
+            visibility: visible;
+            opacity: 1;
         }
 
         .brand-mark {
             position: relative;
-            width: 58px;
-            height: 58px;
+
+            width: 60px;
+            height: 60px;
+
             border-radius: 50%;
 
             display: flex;
@@ -219,71 +161,81 @@
 
             background:
                 radial-gradient(
-                    circle at 35% 25%,
-                    #1e3a8a,
-                    #080b14 68%
+                    circle at 30% 20%,
+                    #2563eb,
+                    #080b14 65%
                 );
 
-            border: 2px solid #3b82f6;
+            border: 2px solid #60a5fa;
 
             box-shadow:
                 0 0 0 3px rgba(59,130,246,0.12),
-                0 0 25px rgba(37,99,235,0.5),
-                inset 0 0 20px rgba(37,99,235,0.25);
+                0 0 30px rgba(37,99,235,0.55),
+                inset 0 0 20px rgba(37,99,235,0.3);
 
             transition: 0.3s ease;
         }
 
         .brand-ring {
             position: absolute;
-            width: 44px;
-            height: 44px;
+
+            width: 45px;
+            height: 45px;
+
             border-radius: 50%;
-            border: 1px solid rgba(147,197,253,0.7);
+
+            border: 1px solid rgba(147,197,253,0.8);
         }
 
         .brand-letter {
             position: relative;
             z-index: 2;
 
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 23px;
+            font-size: 22px;
             font-weight: 900;
+
             letter-spacing: -3px;
 
-            color: #ffffff;
+            color: white;
+
             transform: skew(-8deg);
         }
 
         .brand-letter span {
-            color: #3b82f6;
+            color: #60a5fa;
         }
 
         .brand-name {
-            color: #ffffff;
+            color: white;
+
             font-size: 15px;
-            font-weight: 800;
-            letter-spacing: 1.7px;
+            font-weight: 900;
+
+            letter-spacing: 1.8px;
+
             line-height: 1.1;
         }
 
         .brand-name small {
             display: block;
+
             margin-top: 5px;
 
             color: #60a5fa;
+
             font-size: 9px;
-            font-weight: 700;
+            font-weight: bold;
+
             letter-spacing: 4px;
         }
 
         .top-logo:hover .brand-mark {
-            transform: scale(1.07) rotate(3deg);
+            transform: scale(1.08) rotate(4deg);
 
             box-shadow:
-                0 0 0 3px rgba(59,130,246,0.18),
-                0 0 35px rgba(37,99,235,0.7),
-                inset 0 0 25px rgba(37,99,235,0.35);
+                0 0 0 4px rgba(59,130,246,0.15),
+                0 0 45px rgba(37,99,235,0.8),
+                inset 0 0 25px rgba(37,99,235,0.4);
         }
 
         /* =========================
@@ -291,82 +243,168 @@
         ========================== */
 
         .hero {
-            min-height: 90vh;
+            min-height: 92vh;
+
             display: flex;
             align-items: center;
+
             text-align: center;
-            padding: 100px 0 70px;
+
+            padding: 120px 0 80px;
+
+            position: relative;
 
             background:
                 radial-gradient(
-                    circle at top,
-                    #243b66 0%,
-                    #111827 35%,
-                    #080b12 75%
+                    circle at 50% 20%,
+                    rgba(37,99,235,0.28),
+                    transparent 38%
+                ),
+                linear-gradient(
+                    180deg,
+                    #101a31,
+                    #05070d
                 );
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            background: rgba(37,99,235,0.12);
+
+            filter: blur(80px);
+
+            top: 20%;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            animation: glowPulse 5s ease-in-out infinite;
+        }
+
+        @keyframes glowPulse {
+
+            0%, 100% {
+                opacity: .4;
+                transform: translateX(-50%) scale(.9);
+            }
+
+            50% {
+                opacity: .8;
+                transform: translateX(-50%) scale(1.1);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
 
         .badge {
             display: inline-block;
-            padding: 8px 17px;
+
+            padding: 9px 18px;
+
             border-radius: 30px;
 
-            background: #17233d;
-            border: 1px solid #344d7a;
+            background: rgba(23,35,61,0.8);
+
+            border: 1px solid #3b5f9e;
 
             color: #8fb8ff;
+
             font-size: 14px;
-            margin-bottom: 20px;
+
+            margin-bottom: 22px;
+
+            box-shadow:
+                0 0 20px rgba(37,99,235,0.15);
         }
 
         .hero h1 {
-            font-size: 55px;
-            line-height: 1.1;
-            margin-bottom: 20px;
+            font-size: 58px;
+
+            line-height: 1.05;
+
+            margin-bottom: 22px;
+
+            letter-spacing: -2px;
         }
 
         .hero h1 span {
             color: #4da3ff;
+
+            text-shadow:
+                0 0 25px rgba(77,163,255,0.45);
         }
 
         .hero p {
-            max-width: 700px;
-            margin: 0 auto 30px;
+            max-width: 720px;
+
+            margin: 0 auto 32px;
 
             color: #b9c2d0;
+
             font-size: 19px;
         }
+
+        /* =========================
+           BUTTON
+        ========================== */
 
         .download-btn {
             display: inline-block;
 
             text-decoration: none;
 
-            background: #ffffff;
-            color: #0b0f19;
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #dbeafe
+                );
+
+            color: #07101f;
 
             padding: 15px 30px;
-            border-radius: 10px;
 
-            font-weight: bold;
+            border-radius: 12px;
+
+            font-weight: 900;
+
             font-size: 17px;
 
-            transition: 0.3s;
+            transition: .3s;
+
             margin: 8px;
+
+            box-shadow:
+                0 10px 30px rgba(37,99,235,0.18);
         }
 
         .download-btn:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px) scale(1.02);
 
             background: #4da3ff;
-            color: #ffffff;
 
-            box-shadow: 0 10px 30px rgba(77,163,255,0.3);
+            color: white;
+
+            box-shadow:
+                0 15px 40px rgba(37,99,235,0.4);
         }
 
         .info {
-            margin-top: 20px;
+            margin-top: 18px;
+
             color: #8994a6;
+
             font-size: 14px;
         }
 
@@ -375,17 +413,22 @@
         ========================== */
 
         section {
-            padding: 75px 0;
+            padding: 85px 0;
         }
 
         .section-title {
             text-align: center;
-            font-size: 35px;
+
+            font-size: 36px;
+
             margin-bottom: 45px;
         }
 
         .section-title span {
             color: #4da3ff;
+
+            text-shadow:
+                0 0 20px rgba(77,163,255,0.3);
         }
 
         /* =========================
@@ -394,36 +437,59 @@
 
         .features {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 22px;
         }
 
         .feature {
-            background: #121927;
-            border: 1px solid #222e43;
-            border-radius: 15px;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(18,25,39,.95),
+                    rgba(10,15,25,.95)
+                );
 
-            padding: 30px;
+            border: 1px solid #263653;
+
+            border-radius: 18px;
+
+            padding: 32px;
+
             text-align: center;
 
-            transition: 0.3s;
+            transition: .3s;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,.15);
         }
 
         .feature:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+
             border-color: #4da3ff;
 
             box-shadow:
-                0 10px 30px rgba(37,99,235,0.12);
+                0 15px 40px rgba(37,99,235,.15);
         }
 
         .feature-icon {
-            font-size: 38px;
+            font-size: 40px;
+
             margin-bottom: 15px;
+
+            filter:
+                drop-shadow(
+                    0 0 10px
+                    rgba(77,163,255,.25)
+                );
         }
 
         .feature h3 {
             margin-bottom: 10px;
+
             font-size: 20px;
         }
 
@@ -436,60 +502,277 @@
         ========================== */
 
         .about {
-            background: #0e1420;
+            background:
+                linear-gradient(
+                    180deg,
+                    #080c15,
+                    #0d1421
+                );
         }
 
         .about-box {
             max-width: 850px;
+
             margin: auto;
+
             text-align: center;
         }
 
         .about-box p {
             color: #aeb8c7;
+
             font-size: 17px;
+
             margin-bottom: 18px;
         }
 
         /* =========================
-           DOWNLOAD
+           REVIEWS
+        ========================== */
+
+        .reviews-section {
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(37,99,235,.10),
+                    transparent 50%
+                );
+        }
+
+        .rating-box {
+            max-width: 850px;
+
+            margin: auto;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #121927,
+                    #090e18
+                );
+
+            border: 1px solid #263653;
+
+            border-radius: 22px;
+
+            padding: 38px;
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,.25);
+        }
+
+        .rating-summary {
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+        .rating-number strong {
+            display: block;
+
+            font-size: 52px;
+        }
+
+        .stars {
+            color: #4da3ff;
+
+            font-size: 30px;
+
+            letter-spacing: 3px;
+        }
+
+        .rating-number p {
+            color: #8994a6;
+
+            font-size: 14px;
+        }
+
+        .review-form {
+            display: grid;
+
+            gap: 15px;
+        }
+
+        .review-form input,
+        .review-form textarea {
+            width: 100%;
+
+            padding: 14px 16px;
+
+            border-radius: 10px;
+
+            border: 1px solid #293852;
+
+            background: #080d16;
+
+            color: white;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+        .review-form input:focus,
+        .review-form textarea:focus {
+            border-color: #4da3ff;
+
+            box-shadow:
+                0 0 15px
+                rgba(77,163,255,.12);
+        }
+
+        .review-form textarea {
+            min-height: 110px;
+
+            resize: vertical;
+        }
+
+        .star-selector {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 8px;
+        }
+
+        .star-selector button {
+            background: transparent;
+
+            border: none;
+
+            color: #39465c;
+
+            font-size: 32px;
+
+            cursor: pointer;
+
+            transition: .2s;
+        }
+
+        .star-selector button:hover,
+        .star-selector button.active {
+            color: #4da3ff;
+
+            transform: scale(1.15);
+        }
+
+        .submit-review {
+            border: none;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #3b82f6
+                );
+
+            color: white;
+
+            padding: 14px 25px;
+
+            border-radius: 10px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .submit-review:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(37,99,235,.3);
+        }
+
+        .reviews-list {
+            margin-top: 30px;
+
+            display: grid;
+
+            gap: 15px;
+        }
+
+        .review-card {
+            background: #080d16;
+
+            border: 1px solid #202d43;
+
+            border-radius: 14px;
+
+            padding: 20px;
+        }
+
+        .review-card strong {
+            color: white;
+        }
+
+        .review-card .review-stars {
+            color: #4da3ff;
+
+            margin: 5px 0;
+        }
+
+        .review-card p {
+            color: #aeb8c7;
+        }
+
+        /* =========================
+           DOWNLOAD SECTION
         ========================== */
 
         .download-section {
             text-align: center;
 
             background:
-                linear-gradient(
-                    135deg,
-                    #111c31,
-                    #0b0f19
+                radial-gradient(
+                    circle at center,
+                    rgba(37,99,235,.15),
+                    transparent 55%
                 );
         }
 
         .download-section p {
             color: #aeb8c7;
+
             margin-bottom: 25px;
         }
 
         .download-card {
             max-width: 600px;
+
             margin: auto;
 
-            padding: 35px;
+            padding: 38px;
 
-            background: #121927;
+            background:
+                linear-gradient(
+                    145deg,
+                    #121927,
+                    #0b101b
+                );
 
             border: 1px solid #293852;
-            border-radius: 18px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,.2);
         }
 
         .download-card h3 {
             font-size: 25px;
+
             margin-bottom: 12px;
         }
 
         .download-details {
             color: #9ca8ba;
+
             margin-bottom: 20px;
         }
 
@@ -502,7 +785,8 @@
 
             text-align: center;
 
-            background: #080b12;
+            background: #05070d;
+
             color: #788496;
 
             font-size: 14px;
@@ -522,12 +806,14 @@
 
                 width: fit-content;
 
-                margin: 20px auto 0;
+                margin: 18px auto 0;
             }
 
             .hero {
                 min-height: auto;
-                padding: 40px 0 80px;
+
+                padding:
+                    45px 0 80px;
             }
 
             .hero h1 {
@@ -548,8 +834,18 @@
 
             .download-btn {
                 width: 90%;
+
                 max-width: 320px;
             }
+
+            .rating-box {
+                padding: 25px 18px;
+            }
+
+            .brand-name {
+                font-size: 13px;
+            }
+
         }
 
     </style>
@@ -557,31 +853,40 @@
 
 <body>
 
-    <!-- PREMIUM BRAND LOGO -->
+    <!-- =========================
+         LOGO
+    ========================== -->
 
     <a href="#" class="top-logo">
 
         <div class="brand-mark">
+
             <div class="brand-ring"></div>
 
             <div class="brand-letter">
                 A<span>G</span>
             </div>
+
         </div>
 
         <div class="brand-name">
+
             <div>ALL-IN-ONE</div>
+
             <small>GAMES</small>
+
         </div>
 
     </a>
 
 
-    <!-- HERO SECTION -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <header class="hero">
 
-        <div class="container">
+        <div class="container hero-content">
 
             <div class="badge">
                 🎮 Android Gaming App
@@ -592,12 +897,12 @@
             </h1>
 
             <p>
-                Discover multiple interesting and traditional games
-                in one simple and enjoyable Android app.
+                Discover multiple interesting and traditional
+                games in one simple and enjoyable Android app.
             </p>
 
             <a
-                class="download-btn"
+                class="download-btn sound-btn"
                 href="https://github.com/shaklainansari777-pixel/All-in-one-game.shaklain/releases/download/v1.0.0/all.in.one.game.apk"
                 target="_blank"
                 rel="noopener"
@@ -606,7 +911,11 @@
             </a>
 
             <div class="info">
-                Version 1.0.0 &nbsp; • &nbsp; 31.7 MB &nbsp; • &nbsp; Android
+                Version 1.0.0
+                &nbsp; • &nbsp;
+                31.7 MB
+                &nbsp; • &nbsp;
+                Android
             </div>
 
         </div>
@@ -614,7 +923,9 @@
     </header>
 
 
-    <!-- FEATURES -->
+    <!-- =========================
+         FEATURES
+    ========================== -->
 
     <section>
 
@@ -630,8 +941,8 @@
                     <div class="feature-icon">🎮</div>
                     <h3>Multiple Games</h3>
                     <p>
-                        Enjoy different types of interesting games
-                        from one convenient application.
+                        Enjoy different types of interesting
+                        games from one convenient application.
                     </p>
                 </div>
 
@@ -639,8 +950,8 @@
                     <div class="feature-icon">⚡</div>
                     <h3>Quick & Easy</h3>
                     <p>
-                        Simple controls and an easy-to-use interface
-                        make gaming enjoyable.
+                        Simple controls and an easy-to-use
+                        interface make gaming enjoyable.
                     </p>
                 </div>
 
@@ -648,8 +959,8 @@
                     <div class="feature-icon">🧠</div>
                     <h3>Challenge Your Mind</h3>
                     <p>
-                        Play fun games designed to keep you entertained
-                        and challenged.
+                        Play fun games designed to keep you
+                        entertained and challenged.
                     </p>
                 </div>
 
@@ -657,8 +968,8 @@
                     <div class="feature-icon">📱</div>
                     <h3>Mobile Friendly</h3>
                     <p>
-                        Enjoy the gaming experience directly on your
-                        Android device.
+                        Enjoy the gaming experience directly
+                        on your Android device.
                     </p>
                 </div>
 
@@ -675,8 +986,8 @@
                     <div class="feature-icon">🎯</div>
                     <h3>Fun Anytime</h3>
                     <p>
-                        Perfect for short breaks or longer gaming
-                        sessions.
+                        Perfect for short breaks or longer
+                        gaming sessions.
                     </p>
                 </div>
 
@@ -687,7 +998,9 @@
     </section>
 
 
-    <!-- ABOUT -->
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
     <section class="about">
 
@@ -705,14 +1018,14 @@
                 </p>
 
                 <p>
-                    Whether you want to enjoy a quick game during a
-                    break or spend more time playing, the app is
+                    Whether you want to enjoy a quick game during
+                    a break or spend more time playing, the app is
                     designed to provide a simple and enjoyable experience.
                 </p>
 
                 <p>
-                    Download the APK and discover the games available
-                    inside the application.
+                    Download the APK and discover the games
+                    available inside the application.
                 </p>
 
             </div>
@@ -722,7 +1035,134 @@
     </section>
 
 
-    <!-- DOWNLOAD SECTION -->
+    <!-- =========================
+         RATINGS & REVIEWS
+    ========================== -->
+
+    <section class="reviews-section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Ratings & <span>Reviews</span>
+            </h2>
+
+            <div class="rating-box">
+
+                <div class="rating-summary">
+
+                    <div class="rating-number">
+
+                        <strong id="averageRating">
+                            0.0
+                        </strong>
+
+                        <div
+                            class="stars"
+                            id="averageStars"
+                        >
+                            ☆☆☆☆☆
+                        </div>
+
+                        <p id="reviewCount">
+                            0 reviews
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    class="review-form"
+                    id="reviewForm"
+                >
+
+                    <input
+                        type="text"
+                        id="reviewName"
+                        placeholder="Your name"
+                        maxlength="40"
+                        required
+                    >
+
+
+                    <div
+                        class="star-selector"
+                        id="starSelector"
+                    >
+
+                        <button
+                            type="button"
+                            data-rating="1"
+                        >
+                            ★
+                        </button>
+
+                        <button
+                            type="button"
+                            data-rating="2"
+                        >
+                            ★
+                        </button>
+
+                        <button
+                            type="button"
+                            data-rating="3"
+                        >
+                            ★
+                        </button>
+
+                        <button
+                            type="button"
+                            data-rating="4"
+                        >
+                            ★
+                        </button>
+
+                        <button
+                            type="button"
+                            data-rating="5"
+                        >
+                            ★
+                        </button>
+
+                    </div>
+
+
+                    <textarea
+                        id="reviewText"
+                        placeholder="Write your review..."
+                        maxlength="300"
+                        required
+                    ></textarea>
+
+
+                    <button
+                        type="submit"
+                        class="submit-review sound-btn"
+                    >
+                        Submit Review
+                    </button>
+
+                </form>
+
+
+                <div
+                    class="reviews-list"
+                    id="reviewsList"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DOWNLOAD
+    ========================== -->
 
     <section class="download-section">
 
@@ -736,18 +1176,28 @@
                 Download All-in-One Games and start playing today.
             </p>
 
+
             <div class="download-card">
 
-                <h3>All-in-One Games</h3>
+                <h3>
+                    All-in-One Games
+                </h3>
 
                 <div class="download-details">
-                    Android APK<br>
-                    Version: 1.0.0<br>
+
+                    Android APK
+                    <br>
+
+                    Version: 1.0.0
+                    <br>
+
                     File size: 31.7 MB
+
                 </div>
 
+
                 <a
-                    class="download-btn"
+                    class="download-btn sound-btn"
                     href="https://github.com/shaklainansari777-pixel/All-in-one-game.shaklain/releases/download/v1.0.0/all.in.one.game.apk"
                     target="_blank"
                     rel="noopener"
@@ -762,14 +1212,17 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
 
         <div class="container">
 
             <p>
-                © 2026 All-in-One Games. All rights reserved.
+                © 2026 All-in-One Games.
+                All rights reserved.
             </p>
 
             <p>
@@ -779,6 +1232,419 @@
         </div>
 
     </footer>
+
+
+    <!-- =========================
+         SOUND EFFECTS + REVIEWS
+    ========================== -->
+
+    <script>
+
+        /* =========================
+           SIMPLE CLICK SOUND
+        ========================== */
+
+        let audioContext;
+
+        function playClickSound() {
+
+            try {
+
+                if (!audioContext) {
+
+                    audioContext =
+                        new (
+                            window.AudioContext ||
+                            window.webkitAudioContext
+                        )();
+
+                }
+
+                const oscillator =
+                    audioContext.createOscillator();
+
+                const gain =
+                    audioContext.createGain();
+
+                oscillator.type = "sine";
+
+                oscillator.frequency.setValueAtTime(
+                    520,
+                    audioContext.currentTime
+                );
+
+                oscillator.frequency.exponentialRampToValueAtTime(
+                    760,
+                    audioContext.currentTime + 0.08
+                );
+
+                gain.gain.setValueAtTime(
+                    0.08,
+                    audioContext.currentTime
+                );
+
+                gain.gain.exponentialRampToValueAtTime(
+                    0.001,
+                    audioContext.currentTime + 0.1
+                );
+
+                oscillator.connect(gain);
+
+                gain.connect(
+                    audioContext.destination
+                );
+
+                oscillator.start();
+
+                oscillator.stop(
+                    audioContext.currentTime + 0.1
+                );
+
+            } catch (error) {
+
+                console.log(
+                    "Sound unavailable"
+                );
+
+            }
+
+        }
+
+
+        document
+            .querySelectorAll(".sound-btn")
+            .forEach(button => {
+
+                button.addEventListener(
+                    "click",
+                    playClickSound
+                );
+
+            });
+
+
+        /* =========================
+           REVIEWS
+        ========================== */
+
+        let selectedRating = 0;
+
+
+        const starButtons =
+            document.querySelectorAll(
+                "#starSelector button"
+            );
+
+
+        starButtons.forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    selectedRating =
+                        Number(
+                            button.dataset.rating
+                        );
+
+
+                    starButtons.forEach(
+                        star => {
+
+                            const rating =
+                                Number(
+                                    star.dataset.rating
+                                );
+
+                            star.classList.toggle(
+                                "active",
+                                rating <=
+                                selectedRating
+                            );
+
+                        }
+                    );
+
+                    playClickSound();
+
+                }
+            );
+
+        });
+
+
+        function getReviews() {
+
+            return JSON.parse(
+                localStorage.getItem(
+                    "allInOneReviews"
+                ) || "[]"
+            );
+
+        }
+
+
+        function saveReviews(reviews) {
+
+            localStorage.setItem(
+                "allInOneReviews",
+                JSON.stringify(reviews)
+            );
+
+        }
+
+
+        function displayReviews() {
+
+            const reviews =
+                getReviews();
+
+
+            const list =
+                document.getElementById(
+                    "reviewsList"
+                );
+
+
+            const count =
+                document.getElementById(
+                    "reviewCount"
+                );
+
+
+            const average =
+                document.getElementById(
+                    "averageRating"
+                );
+
+
+            const averageStars =
+                document.getElementById(
+                    "averageStars"
+                );
+
+
+            count.textContent =
+                reviews.length +
+                (
+                    reviews.length === 1
+                        ? " review"
+                        : " reviews"
+                );
+
+
+            if (reviews.length === 0) {
+
+                average.textContent =
+                    "0.0";
+
+                averageStars.textContent =
+                    "☆☆☆☆☆";
+
+                list.innerHTML = "";
+
+                return;
+
+            }
+
+
+            const total =
+                reviews.reduce(
+                    (sum, review) =>
+                        sum + review.rating,
+                    0
+                );
+
+
+            const avg =
+                total / reviews.length;
+
+
+            average.textContent =
+                avg.toFixed(1);
+
+
+            const rounded =
+                Math.round(avg);
+
+
+            averageStars.textContent =
+                "★".repeat(rounded) +
+                "☆".repeat(5 - rounded);
+
+
+            list.innerHTML = "";
+
+
+            reviews
+                .slice()
+                .reverse()
+                .forEach(review => {
+
+                    const card =
+                        document.createElement(
+                            "div"
+                        );
+
+                    card.className =
+                        "review-card";
+
+
+                    const name =
+                        document.createElement(
+                            "strong"
+                        );
+
+                    name.textContent =
+                        review.name;
+
+
+                    const stars =
+                        document.createElement(
+                            "div"
+                        );
+
+                    stars.className =
+                        "review-stars";
+
+
+                    stars.textContent =
+                        "★".repeat(
+                            review.rating
+                        ) +
+                        "☆".repeat(
+                            5 - review.rating
+                        );
+
+
+                    const text =
+                        document.createElement(
+                            "p"
+                        );
+
+                    text.textContent =
+                        review.text;
+
+
+                    card.appendChild(name);
+
+                    card.appendChild(stars);
+
+                    card.appendChild(text);
+
+
+                    list.appendChild(card);
+
+                });
+
+        }
+
+
+        document
+            .getElementById("reviewForm")
+            .addEventListener(
+                "submit",
+                function(event) {
+
+                    event.preventDefault();
+
+
+                    if (selectedRating === 0) {
+
+                        alert(
+                            "Please select a rating first."
+                        );
+
+                        return;
+
+                    }
+
+
+                    const name =
+                        document
+                            .getElementById(
+                                "reviewName"
+                            )
+                            .value
+                            .trim();
+
+
+                    const text =
+                        document
+                            .getElementById(
+                                "reviewText"
+                            )
+                            .value
+                            .trim();
+
+
+                    if (!name || !text) {
+
+                        alert(
+                            "Please fill in your name and review."
+                        );
+
+                        return;
+
+                    }
+
+
+                    const reviews =
+                        getReviews();
+
+
+                    reviews.push({
+
+                        name: name,
+
+                        rating:
+                            selectedRating,
+
+                        text: text,
+
+                        date:
+                            new Date()
+                                .toISOString()
+
+                    });
+
+
+                    saveReviews(
+                        reviews
+                    );
+
+
+                    this.reset();
+
+
+                    selectedRating = 0;
+
+
+                    starButtons.forEach(
+                        star =>
+                            star.classList.remove(
+                                "active"
+                            )
+                    );
+
+
+                    displayReviews();
+
+
+                    playClickSound();
+
+
+                    alert(
+                        "Thank you for your review!"
+                    );
+
+                }
+            );
+
+
+        displayReviews();
+
+    </script>
 
 </body>
 </html>
