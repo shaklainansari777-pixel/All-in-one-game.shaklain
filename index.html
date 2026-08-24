@@ -6,76 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>All-in-one-game.shaklain - All-in-One Games</title>
-<meta name="google-site-verification" content="nXH9ScCwq5O2jmMCkDbRsoH01-i2h807f12kUi4G5d4" />
-    <meta name="description" content="Download All-in-One Games, a fun Android gaming app with multiple interesting and traditional games in one place. Free to download and easy to play.">
 
-    <meta name="keywords" content="All-in-One Games, Android games, free games, download games, mobile games, APK">
+    <meta name="google-site-verification" content="nXH9ScCwq5O2jmMCkDbRsoH01-i2h807f12kUi4G5d4">
+
+    <meta name="description" content="All-in-one-game.shaklain - Discover multiple fun and exciting Android games in one app. Download All-in-One Games and start playing today.">
+
+    <meta name="keywords" content="All-in-one-game.shaklain, All-in-One Games, Android games, free games, mobile games, APK">
 
     <meta name="author" content="All-in-One Games">
 
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="All-in-One Games - Android Game App">
-    <meta property="og:description" content="Play multiple interesting and traditional games in one Android app. Download All-in-One Games for free.">
+    <meta property="og:title" content="All-in-one-game.shaklain - All-in-One Games">
+    <meta property="og:description" content="Discover multiple fun and exciting Android games in one app.">
     <meta property="og:type" content="website">
 
-    <style>.brand-logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 13px;
-    text-decoration: none;
-}
+    <style>
 
-.brand-mark {
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: radial-gradient(circle at 35% 25%, #1e3a8a, #080b14 65%);
-    border: 2px solid #2563eb;
-    box-shadow: 0 0 0 3px rgba(37,99,235,.12),
-                0 0 22px rgba(37,99,235,.45),
-                inset 0 0 18px rgba(37,99,235,.25);
-}
-
-.brand-ring {
-    position: absolute;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1px solid rgba(96,165,250,.65);
-}
-
-.brand-letter {
-    position: relative;
-    z-index: 2;
-    font-family: Arial, sans-serif;
-    font-size: 24px;
-    font-weight: 900;
-    color: white;
-}
-
-.brand-letter span {
-    color: #3b82f6;
-}
-
-.brand-name {
-    color: white;
-    font-family: Arial, sans-serif;
-    font-weight: 800;
-    font-size: 15px;
-    letter-spacing: 1.8px;
-}
-
-.brand-name small {
-    display: block;
-    margin-top: 5px;
-    color: #60a5fa;
-    font-size: 9px;
-    letter-spacing: 4px;
-}
         * {
             margin: 0;
             padding: 0;
@@ -87,19 +34,8 @@
         }
 
         body {
-            <a href="#" class="brand-logo">
-    <div class="brand-mark">
-        <div class="brand-ring"></div>
-        <div class="brand-letter">A<span>G</span></div>
-    </div>
-
-    <div class="brand-name">
-        <div>ALL-IN-ONE</div>
-        <small>GAMES</small>
-    </div>
-</a>
             font-family: Arial, Helvetica, sans-serif;
-            background: #0b0f19;
+            background: #080b12;
             color: #ffffff;
             line-height: 1.6;
         }
@@ -110,23 +46,128 @@
             margin: auto;
         }
 
-        /* HERO */
+        /* =========================
+           PREMIUM LOGO
+        ========================== */
+
+        .top-logo {
+            position: absolute;
+            top: 25px;
+            left: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            z-index: 10;
+        }
+
+        .brand-mark {
+            position: relative;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                radial-gradient(
+                    circle at 35% 25%,
+                    #1e3a8a,
+                    #080b14 68%
+                );
+
+            border: 2px solid #3b82f6;
+
+            box-shadow:
+                0 0 0 3px rgba(59,130,246,0.12),
+                0 0 25px rgba(37,99,235,0.5),
+                inset 0 0 20px rgba(37,99,235,0.25);
+
+            transition: 0.3s ease;
+        }
+
+        .brand-ring {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid rgba(147,197,253,0.7);
+        }
+
+        .brand-letter {
+            position: relative;
+            z-index: 2;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 23px;
+            font-weight: 900;
+            letter-spacing: -3px;
+
+            color: #ffffff;
+            transform: skew(-8deg);
+        }
+
+        .brand-letter span {
+            color: #3b82f6;
+        }
+
+        .brand-name {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 1.7px;
+            line-height: 1.1;
+        }
+
+        .brand-name small {
+            display: block;
+            margin-top: 5px;
+
+            color: #60a5fa;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+
+        .top-logo:hover .brand-mark {
+            transform: scale(1.07) rotate(3deg);
+
+            box-shadow:
+                0 0 0 3px rgba(59,130,246,0.18),
+                0 0 35px rgba(37,99,235,0.7),
+                inset 0 0 25px rgba(37,99,235,0.35);
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
         .hero {
             min-height: 90vh;
             display: flex;
             align-items: center;
             text-align: center;
-            padding: 70px 0;
+            padding: 100px 0 70px;
+
             background:
-                radial-gradient(circle at top, #243b66 0%, #0b0f19 55%);
+                radial-gradient(
+                    circle at top,
+                    #243b66 0%,
+                    #111827 35%,
+                    #080b12 75%
+                );
         }
 
         .badge {
             display: inline-block;
-            padding: 8px 16px;
+            padding: 8px 17px;
             border-radius: 30px;
+
             background: #17233d;
             border: 1px solid #344d7a;
+
             color: #8fb8ff;
             font-size: 14px;
             margin-bottom: 20px;
@@ -145,27 +186,36 @@
         .hero p {
             max-width: 700px;
             margin: 0 auto 30px;
+
             color: #b9c2d0;
             font-size: 19px;
         }
 
         .download-btn {
             display: inline-block;
+
             text-decoration: none;
+
             background: #ffffff;
             color: #0b0f19;
+
             padding: 15px 30px;
             border-radius: 10px;
+
             font-weight: bold;
             font-size: 17px;
+
             transition: 0.3s;
             margin: 8px;
         }
 
         .download-btn:hover {
             transform: translateY(-3px);
+
             background: #4da3ff;
             color: #ffffff;
+
+            box-shadow: 0 10px 30px rgba(77,163,255,0.3);
         }
 
         .info {
@@ -174,7 +224,10 @@
             font-size: 14px;
         }
 
-        /* FEATURES */
+        /* =========================
+           SECTIONS
+        ========================== */
+
         section {
             padding: 75px 0;
         }
@@ -189,6 +242,10 @@
             color: #4da3ff;
         }
 
+        /* =========================
+           FEATURES
+        ========================== */
+
         .features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -199,14 +256,19 @@
             background: #121927;
             border: 1px solid #222e43;
             border-radius: 15px;
+
             padding: 30px;
             text-align: center;
+
             transition: 0.3s;
         }
 
         .feature:hover {
             transform: translateY(-5px);
             border-color: #4da3ff;
+
+            box-shadow:
+                0 10px 30px rgba(37,99,235,0.12);
         }
 
         .feature-icon {
@@ -223,7 +285,10 @@
             color: #9ca8ba;
         }
 
-        /* ABOUT */
+        /* =========================
+           ABOUT
+        ========================== */
+
         .about {
             background: #0e1420;
         }
@@ -240,11 +305,19 @@
             margin-bottom: 18px;
         }
 
-        /* DOWNLOAD */
+        /* =========================
+           DOWNLOAD
+        ========================== */
+
         .download-section {
             text-align: center;
+
             background:
-                linear-gradient(135deg, #111c31, #0b0f19);
+                linear-gradient(
+                    135deg,
+                    #111c31,
+                    #0b0f19
+                );
         }
 
         .download-section p {
@@ -255,8 +328,11 @@
         .download-card {
             max-width: 600px;
             margin: auto;
+
             padding: 35px;
+
             background: #121927;
+
             border: 1px solid #293852;
             border-radius: 18px;
         }
@@ -271,26 +347,41 @@
             margin-bottom: 20px;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================== */
+
         footer {
             padding: 30px 0;
+
             text-align: center;
+
             background: #080b12;
             color: #788496;
+
             font-size: 14px;
         }
 
-        footer a {
-            color: #4da3ff;
-            text-decoration: none;
-        }
+        /* =========================
+           MOBILE
+        ========================== */
 
-        /* MOBILE */
         @media (max-width: 768px) {
+
+            .top-logo {
+                position: relative;
+
+                top: auto;
+                left: auto;
+
+                width: fit-content;
+
+                margin: 20px auto 0;
+            }
 
             .hero {
                 min-height: auto;
-                padding: 80px 0;
+                padding: 40px 0 80px;
             }
 
             .hero h1 {
@@ -314,13 +405,36 @@
                 max-width: 320px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
+    <!-- PREMIUM BRAND LOGO -->
+
+    <a href="#" class="top-logo">
+
+        <div class="brand-mark">
+            <div class="brand-ring"></div>
+
+            <div class="brand-letter">
+                A<span>G</span>
+            </div>
+        </div>
+
+        <div class="brand-name">
+            <div>ALL-IN-ONE</div>
+            <small>GAMES</small>
+        </div>
+
+    </a>
+
+
     <!-- HERO SECTION -->
+
     <header class="hero">
+
         <div class="container">
 
             <div class="badge">
@@ -350,11 +464,14 @@
             </div>
 
         </div>
+
     </header>
 
 
     <!-- FEATURES -->
+
     <section>
+
         <div class="container">
 
             <h2 class="section-title">
@@ -418,12 +535,16 @@
                 </div>
 
             </div>
+
         </div>
+
     </section>
 
 
     <!-- ABOUT -->
+
     <section class="about">
+
         <div class="container">
 
             <div class="about-box">
@@ -449,11 +570,14 @@
                 </p>
 
             </div>
+
         </div>
+
     </section>
 
 
     <!-- DOWNLOAD SECTION -->
+
     <section class="download-section">
 
         <div class="container">
@@ -493,6 +617,7 @@
 
 
     <!-- FOOTER -->
+
     <footer>
 
         <div class="container">
