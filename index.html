@@ -19,7 +19,63 @@
     <meta property="og:description" content="Play multiple interesting and traditional games in one Android app. Download All-in-One Games for free.">
     <meta property="og:type" content="website">
 
-    <style>
+    <style>.brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    text-decoration: none;
+}
+
+.brand-mark {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 35% 25%, #1e3a8a, #080b14 65%);
+    border: 2px solid #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,.12),
+                0 0 22px rgba(37,99,235,.45),
+                inset 0 0 18px rgba(37,99,235,.25);
+}
+
+.brand-ring {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(96,165,250,.65);
+}
+
+.brand-letter {
+    position: relative;
+    z-index: 2;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: white;
+}
+
+.brand-letter span {
+    color: #3b82f6;
+}
+
+.brand-name {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 1.8px;
+}
+
+.brand-name small {
+    display: block;
+    margin-top: 5px;
+    color: #60a5fa;
+    font-size: 9px;
+    letter-spacing: 4px;
+}
         * {
             margin: 0;
             padding: 0;
@@ -31,6 +87,17 @@
         }
 
         body {
+            <a href="#" class="brand-logo">
+    <div class="brand-mark">
+        <div class="brand-ring"></div>
+        <div class="brand-letter">A<span>G</span></div>
+    </div>
+
+    <div class="brand-name">
+        <div>ALL-IN-ONE</div>
+        <small>GAMES</small>
+    </div>
+</a>
             font-family: Arial, Helvetica, sans-serif;
             background: #0b0f19;
             color: #ffffff;
