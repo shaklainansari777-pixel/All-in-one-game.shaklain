@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shaklainansari777-pixel.github.io/All-in-one-game.shaklain/sitemap.xml
