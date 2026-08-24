@@ -21,7 +21,145 @@
     <meta property="og:description" content="Discover multiple fun and exciting Android games in one app.">
     <meta property="og:type" content="website">
 
-    <style>
+    <style>/* =========================
+   RATINGS & REVIEWS
+========================= */
+
+.reviews-section {
+    background: #080b12;
+}
+
+.rating-box {
+    max-width: 850px;
+    margin: auto;
+    background: linear-gradient(145deg, #121927, #0d131f);
+    border: 1px solid #263653;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.rating-summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.rating-number {
+    text-align: center;
+}
+
+.rating-number strong {
+    display: block;
+    font-size: 48px;
+    color: #ffffff;
+}
+
+.stars {
+    color: #4da3ff;
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+.rating-number p {
+    color: #8994a6;
+    font-size: 14px;
+}
+
+.review-form {
+    display: grid;
+    gap: 15px;
+}
+
+.review-form input,
+.review-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid #293852;
+    background: #0b101b;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+    border-color: #4da3ff;
+}
+
+.review-form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.star-selector {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 5px 0;
+}
+
+.star-selector button {
+    background: transparent;
+    border: none;
+    color: #39465c;
+    font-size: 32px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.star-selector button:hover,
+.star-selector button.active {
+    color: #4da3ff;
+    transform: scale(1.12);
+}
+
+.submit-review {
+    border: none;
+    background: #4da3ff;
+    color: #ffffff;
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-review:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+.reviews-list {
+    margin-top: 30px;
+    display: grid;
+    gap: 15px;
+}
+
+.review-card {
+    background: #0b101b;
+    border: 1px solid #202d43;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.review-card strong {
+    color: #ffffff;
+}
+
+.review-card .review-stars {
+    color: #4da3ff;
+    margin: 5px 0;
+}
+
+.review-card p {
+    color: #aeb8c7;
+}
 
         * {
             margin: 0;
