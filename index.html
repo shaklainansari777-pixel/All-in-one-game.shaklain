@@ -2,37 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="_ORcOkylYCdqgo-AM1FG7QLBJpQ7PM_M15YawcvG4b4" />
-    <title>All-in-one-game.shaklain - All-in-One Games</title>
+    <meta name="google-site-verification" content="_ORcOkylYCdqgo-AM1FG7QLBJpQ7PM_M15YawcvG4b4" />
+    <title>All-in-One Games — Premium Android Gaming Collection</title>
 
     <meta name="google-site-verification" content="nXH9ScCwq5O2jmMCkDbRsoH01-i2h807f12kUi4G5d4">
 
     <meta name="description"
-        content="All-in-one-game.shaklain - Discover multiple fun and exciting Android games in one app. Download All-in-One Games and start playing today.">
+        content="All-in-One Games — a curated collection of classic and traditional games in one premium Android app. Download the APK and start playing today.">
 
     <meta name="keywords"
-        content="All-in-one-game.shaklain, All-in-One Games, Android games, free games, mobile games, APK">
+        content="All-in-one-game.shaklain, All-in-One Games, Android games, free games, mobile games, APK, classic games, traditional games">
 
     <meta name="author" content="All-in-One Games">
-
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#07060d">
 
-    <meta property="og:title"
-        content="All-in-one-game.shaklain - All-in-One Games">
-
-    <meta property="og:description"
-        content="Discover multiple fun and exciting Android games in one app.">
-
+    <meta property="og:title" content="All-in-One Games — Premium Android Gaming Collection">
+    <meta property="og:description" content="A curated collection of classic games in one elegant Android app. Download the APK today.">
     <meta property="og:type" content="website">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
     <style>
+        /* ============================================================
+           DESIGN TOKENS
+        ============================================================ */
+        :root {
+            --bg: #07060d;
+            --bg-2: #0c0a17;
+            --bg-3: #131022;
+            --panel: rgba(255, 255, 255, 0.045);
+            --panel-2: rgba(255, 255, 255, 0.07);
+            --line: rgba(255, 255, 255, 0.09);
+            --line-soft: rgba(255, 255, 255, 0.055);
 
-        /* =========================
+            --violet: #8b5cf6;
+            --violet-bright: #a78bfa;
+            --violet-deep: #5b21b6;
+            --gold: #d8b36a;
+            --gold-bright: #f0d795;
+            --gold-deep: #9c7a35;
+
+            --text: #f5f2fd;
+            --text-muted: #b3aac9;
+            --text-dim: #7f7699;
+
+            --font-body: "Outfit", system-ui, sans-serif;
+            --font-display: "Playfair Display", Georgia, serif;
+
+            --shadow-lg: 0 30px 80px -20px rgba(0, 0, 0, 0.65);
+            --radius: 22px;
+        }
+
+        /* ============================================================
            RESET
-        ========================== */
-
+        ============================================================ */
         * {
             margin: 0;
             padding: 0;
@@ -44,55 +74,92 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #05070d;
-            color: #ffffff;
-            line-height: 1.6;
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* =========================
-           ANIMATED BACKGROUND
-        ========================== */
+        ::selection {
+            background: rgba(139, 92, 246, 0.45);
+            color: #fff;
+        }
 
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--violet-deep), var(--gold-deep));
+            border-radius: 20px;
+            border: 2px solid var(--bg);
+        }
+
+        /* ============================================================
+           BACKDROP — aurora + grain + grid
+        ============================================================ */
         body::before {
             content: "";
             position: fixed;
             inset: 0;
-            z-index: -3;
-
+            z-index: -4;
             background:
-                radial-gradient(
-                    circle at 20% 20%,
-                    rgba(37, 99, 235, 0.20),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 80% 30%,
-                    rgba(0, 180, 255, 0.13),
-                    transparent 28%
-                ),
-                radial-gradient(
-                    circle at 50% 90%,
-                    rgba(29, 78, 216, 0.15),
-                    transparent 30%
-                );
-
-            animation: backgroundMove 12s ease-in-out infinite alternate;
+                radial-gradient(ellipse 55% 45% at 18% 8%, rgba(139, 92, 246, 0.16), transparent 60%),
+                radial-gradient(ellipse 50% 40% at 85% 22%, rgba(216, 179, 106, 0.07), transparent 60%),
+                radial-gradient(ellipse 60% 50% at 50% 96%, rgba(91, 33, 182, 0.18), transparent 65%),
+                linear-gradient(180deg, #0a0817 0%, #07060d 40%, #08060f 100%);
         }
 
-        @keyframes backgroundMove {
-
-            from {
-                transform: scale(1);
-            }
-
-            to {
-                transform: scale(1.15);
-            }
+        .aurora {
+            position: fixed;
+            inset: 0;
+            z-index: -3;
+            pointer-events: none;
+            overflow: hidden;
         }
 
-        /* glowing grid */
+        .aurora span {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(110px);
+            opacity: 0.5;
+            animation: drift 22s ease-in-out infinite alternate;
+        }
+
+        .aurora span:nth-child(1) {
+            width: 560px;
+            height: 560px;
+            top: -180px;
+            left: -120px;
+            background: rgba(139, 92, 246, 0.20);
+        }
+
+        .aurora span:nth-child(2) {
+            width: 460px;
+            height: 460px;
+            top: 30%;
+            right: -180px;
+            background: rgba(216, 179, 106, 0.09);
+            animation-delay: -8s;
+        }
+
+        .aurora span:nth-child(3) {
+            width: 600px;
+            height: 600px;
+            bottom: -220px;
+            left: 30%;
+            background: rgba(76, 29, 149, 0.28);
+            animation-delay: -14s;
+        }
+
+        @keyframes drift {
+            from { transform: translate(0, 0) scale(1); }
+            to   { transform: translate(60px, -50px) scale(1.15); }
+        }
 
         body::after {
             content: "";
@@ -100,983 +167,1762 @@
             inset: 0;
             z-index: -2;
             pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+            opacity: 0.035;
+            mix-blend-mode: overlay;
+        }
 
+        .grid-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
             background-image:
-                linear-gradient(
-                    rgba(59, 130, 246, 0.035) 1px,
-                    transparent 1px
-                ),
-                linear-gradient(
-                    90deg,
-                    rgba(59, 130, 246, 0.035) 1px,
-                    transparent 1px
-                );
-
-            background-size: 50px 50px;
-
-            mask-image: linear-gradient(
-                to bottom,
-                black,
-                transparent
-            );
+                linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+            background-size: 72px 72px;
+            mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black, transparent 75%);
         }
 
         .container {
-            width: 90%;
-            max-width: 1100px;
+            width: min(90%, 1140px);
             margin: auto;
         }
 
-        /* =========================
-           TOP LOGO
-        ========================== */
+        /* ============================================================
+           NAVBAR
+        ============================================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 22px 0;
+            transition: padding 0.4s ease, background 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+            border-bottom: 1px solid transparent;
+        }
 
-        .top-logo {
-            position: absolute;
-            top: 22px;
-            left: 25px;
+        .navbar.scrolled {
+            padding: 12px 0;
+            background: rgba(9, 7, 20, 0.72);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom-color: var(--line-soft);
+        }
 
+        .nav-inner {
             display: flex;
             align-items: center;
-            gap: 12px;
+            justify-content: space-between;
+            gap: 24px;
+            width: min(92%, 1200px);
+            margin: auto;
+        }
 
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
             text-decoration: none;
-            z-index: 9999;
-
-            visibility: visible;
-            opacity: 1;
+            color: var(--text);
         }
 
         .brand-mark {
             position: relative;
-
-            width: 60px;
-            height: 60px;
-
-            border-radius: 50%;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background:
-                radial-gradient(
-                    circle at 30% 20%,
-                    #2563eb,
-                    #080b14 65%
-                );
-
-            border: 2px solid #60a5fa;
-
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(150deg, #241a45, #120e26 60%);
+            border: 1px solid rgba(216, 179, 106, 0.35);
             box-shadow:
-                0 0 0 3px rgba(59,130,246,0.12),
-                0 0 30px rgba(37,99,235,0.55),
-                inset 0 0 20px rgba(37,99,235,0.3);
-
-            transition: 0.3s ease;
+                0 0 0 1px rgba(139, 92, 246, 0.12),
+                0 10px 30px -8px rgba(139, 92, 246, 0.55),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
         }
 
-        .brand-ring {
+        .brand-mark::after {
+            content: "";
             position: absolute;
+            inset: -3px;
+            border-radius: 19px;
+            background: linear-gradient(135deg, rgba(216, 179, 106, 0.55), transparent 40%, rgba(139, 92, 246, 0.55), transparent 70%);
+            z-index: -1;
+            opacity: 0.7;
+            filter: blur(6px);
+        }
 
-            width: 45px;
-            height: 45px;
-
-            border-radius: 50%;
-
-            border: 1px solid rgba(147,197,253,0.8);
+        .brand:hover .brand-mark {
+            transform: translateY(-2px) rotate(-3deg);
+            box-shadow:
+                0 0 0 1px rgba(139, 92, 246, 0.25),
+                0 14px 38px -8px rgba(139, 92, 246, 0.8),
+                inset 0 1px 0 rgba(255, 255, 255, 0.16);
         }
 
         .brand-letter {
-            position: relative;
-            z-index: 2;
-
-            font-size: 22px;
-            font-weight: 900;
-
-            letter-spacing: -3px;
-
-            color: white;
-
-            transform: skew(-8deg);
-        }
-
-        .brand-letter span {
-            color: #60a5fa;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 19px;
+            letter-spacing: 0.5px;
+            background: linear-gradient(120deg, #fff, var(--violet-bright) 55%, var(--gold-bright));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         .brand-name {
-            color: white;
-
-            font-size: 15px;
-            font-weight: 900;
-
-            letter-spacing: 1.8px;
-
-            line-height: 1.1;
+            line-height: 1.2;
         }
-
+        .brand-name strong {
+            display: block;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
         .brand-name small {
             display: block;
-
-            margin-top: 5px;
-
-            color: #60a5fa;
-
             font-size: 9px;
-            font-weight: bold;
-
-            letter-spacing: 4px;
+            font-weight: 600;
+            letter-spacing: 5px;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-top: 2px;
         }
 
-        .top-logo:hover .brand-mark {
-            transform: scale(1.08) rotate(4deg);
-
-            box-shadow:
-                0 0 0 4px rgba(59,130,246,0.15),
-                0 0 45px rgba(37,99,235,0.8),
-                inset 0 0 25px rgba(37,99,235,0.4);
-        }
-
-        /* =========================
-           HERO
-        ========================== */
-
-        .hero {
-            min-height: 92vh;
-
+        .nav-links {
             display: flex;
             align-items: center;
-
-            text-align: center;
-
-            padding: 120px 0 80px;
-
-            position: relative;
-
-            background:
-                radial-gradient(
-                    circle at 50% 20%,
-                    rgba(37,99,235,0.28),
-                    transparent 38%
-                ),
-                linear-gradient(
-                    180deg,
-                    #101a31,
-                    #05070d
-                );
+            gap: 34px;
+            list-style: none;
         }
 
-        .hero::before {
+        .nav-links a {
+            position: relative;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14.5px;
+            font-weight: 500;
+            letter-spacing: 0.6px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
             content: "";
-
             position: absolute;
-
-            width: 500px;
-            height: 500px;
-
-            border-radius: 50%;
-
-            background: rgba(37,99,235,0.12);
-
-            filter: blur(80px);
-
-            top: 20%;
-            left: 50%;
-
-            transform: translateX(-50%);
-
-            animation: glowPulse 5s ease-in-out infinite;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, var(--violet), var(--gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s ease;
         }
 
-        @keyframes glowPulse {
-
-            0%, 100% {
-                opacity: .4;
-                transform: translateX(-50%) scale(.9);
-            }
-
-            50% {
-                opacity: .8;
-                transform: translateX(-50%) scale(1.1);
-            }
+        .nav-links a:hover {
+            color: var(--text);
+        }
+        .nav-links a:hover::after {
+            transform: scaleX(1);
         }
 
-        .hero-content {
+        .nav-cta {
+            font-size: 13.5px !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.8px !important;
+        }
+
+        /* ============================================================
+           BUTTONS
+        ============================================================ */
+        .btn {
             position: relative;
-            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-family: var(--font-body);
+            font-size: 15.5px;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.3, 1), box-shadow 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+            overflow: hidden;
         }
 
-        .badge {
-            display: inline-block;
-
-            padding: 9px 18px;
-
-            border-radius: 30px;
-
-            background: rgba(23,35,61,0.8);
-
-            border: 1px solid #3b5f9e;
-
-            color: #8fb8ff;
-
-            font-size: 14px;
-
-            margin-bottom: 22px;
-
+        .btn-gold {
+            color: #241703;
+            background: linear-gradient(120deg, #e9c97e 0%, #d8b36a 45%, #b9924a 100%);
             box-shadow:
-                0 0 20px rgba(37,99,235,0.15);
+                0 12px 34px -10px rgba(216, 179, 106, 0.55),
+                inset 0 1px 0 rgba(255, 255, 255, 0.55),
+                inset 0 -2px 6px rgba(122, 90, 30, 0.35);
+        }
+
+        .btn-gold::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -80%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+            transform: skewX(-20deg);
+            transition: left 0.7s ease;
+        }
+
+        .btn-gold:hover::before {
+            left: 130%;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 20px 46px -12px rgba(216, 179, 106, 0.75),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+
+        .btn-ghost {
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--line);
+            backdrop-filter: blur(12px);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        }
+
+        .btn-ghost:hover {
+            transform: translateY(-3px);
+            border-color: rgba(167, 139, 250, 0.55);
+            background: rgba(139, 92, 246, 0.12);
+            box-shadow: 0 14px 36px -12px rgba(139, 92, 246, 0.45);
+        }
+
+        .btn-sm {
+            padding: 10px 22px;
+            font-size: 13.5px;
+        }
+
+        /* ============================================================
+           HERO
+        ============================================================ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 160px 0 90px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 20px;
+            border-radius: 60px;
+            background: rgba(139, 92, 246, 0.09);
+            border: 1px solid rgba(167, 139, 250, 0.28);
+            color: var(--violet-bright);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            box-shadow: 0 0 30px -6px rgba(139, 92, 246, 0.35);
+        }
+
+        .eyebrow::before {
+            content: "✦";
+            color: var(--gold-bright);
+            font-size: 13px;
         }
 
         .hero h1 {
-            font-size: 58px;
-
-            line-height: 1.05;
-
-            margin-bottom: 22px;
-
-            letter-spacing: -2px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: clamp(46px, 6vw, 78px);
+            line-height: 1.04;
+            letter-spacing: -1.5px;
+            margin-bottom: 26px;
         }
 
-        .hero h1 span {
-            color: #4da3ff;
-
-            text-shadow:
-                0 0 25px rgba(77,163,255,0.45);
-        }
-
-        .hero p {
-            max-width: 720px;
-
-            margin: 0 auto 32px;
-
-            color: #b9c2d0;
-
-            font-size: 19px;
-        }
-
-        /* =========================
-           BUTTON
-        ========================== */
-
-        .download-btn {
+        .hero h1 em {
             display: inline-block;
+            font-style: italic;
+            font-weight: 600;
+            background: linear-gradient(115deg, var(--gold-bright) 10%, var(--violet-bright) 60%, #fff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% 200%;
+            animation: shimmer 6s ease-in-out infinite;
+        }
 
-            text-decoration: none;
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
 
+        .hero-sub {
+            max-width: 540px;
+            color: var(--text-muted);
+            font-size: 19px;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        .hero-sub strong {
+            color: var(--gold-bright);
+            font-weight: 500;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 52px;
+        }
+
+        .hero-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .stat {
+            padding: 14px 24px;
+            border-radius: 16px;
+            background: var(--panel);
+            border: 1px solid var(--line-soft);
+            backdrop-filter: blur(10px);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .stat:hover {
+            transform: translateY(-3px);
+            border-color: rgba(216, 179, 106, 0.35);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            background: linear-gradient(120deg, #fff, var(--violet-bright));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .stat span {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text-dim);
+        }
+
+        /* Hero visual */
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-visual::before {
+            content: "";
+            position: absolute;
+            inset: -8%;
             background:
-                linear-gradient(
-                    135deg,
-                    #ffffff,
-                    #dbeafe
-                );
+                radial-gradient(circle at 50% 45%, rgba(139, 92, 246, 0.35), transparent 60%),
+                radial-gradient(circle at 55% 65%, rgba(216, 179, 106, 0.12), transparent 55%);
+            filter: blur(40px);
+            animation: glowPulse 7s ease-in-out infinite;
+        }
 
-            color: #07101f;
+        @keyframes glowPulse {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.06); }
+        }
 
-            padding: 15px 30px;
+        .hero-frame {
+            position: relative;
+            border-radius: 34px;
+            overflow: hidden;
+            border: 1px solid rgba(216, 179, 106, 0.35);
+            box-shadow:
+                var(--shadow-lg),
+                0 0 90px -20px rgba(139, 92, 246, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            transform: perspective(1400px) rotateY(-6deg) rotateX(2deg);
+            transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.3, 1);
+            animation: floaty 7s ease-in-out infinite;
+        }
 
-            border-radius: 12px;
+        .hero-frame::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(200deg, transparent 55%, rgba(7, 6, 13, 0.75) 100%);
+            pointer-events: none;
+        }
 
-            font-weight: 900;
+        @keyframes floaty {
+            0%, 100% { transform: perspective(1400px) rotateY(-6deg) rotateX(2deg) translateY(0); }
+            50% { transform: perspective(1400px) rotateY(-5deg) rotateX(1.5deg) translateY(-14px); }
+        }
 
+        .hero-frame:hover {
+            animation-play-state: paused;
+            transform: perspective(1400px) rotateY(-2deg) rotateX(0deg) translateY(-6px) scale(1.02);
+        }
+
+        .hero-frame img {
+            display: block;
+            width: 100%;
+            height: auto;
+            filter: saturate(1.08) contrast(1.03);
+        }
+
+        .float-chip {
+            position: absolute;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 12px 18px;
+            border-radius: 16px;
+            background: rgba(16, 12, 30, 0.78);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            box-shadow: 0 18px 40px -14px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            animation: chipFloat 6s ease-in-out infinite;
+        }
+
+        .float-chip .ico {
+            font-size: 16px;
+            filter: drop-shadow(0 0 6px rgba(216, 179, 106, 0.6));
+        }
+
+        .chip-1 { top: 8%; left: -34px; animation-delay: 0s; }
+        .chip-2 { bottom: 16%; right: -26px; animation-delay: -2.4s; }
+        .chip-3 { bottom: -20px; left: 12%; animation-delay: -4.2s; }
+
+        @keyframes chipFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .scroll-cue {
+            position: absolute;
+            bottom: 26px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-dim);
+            font-size: 10.5px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .scroll-cue::after {
+            content: "";
+            width: 1px;
+            height: 42px;
+            background: linear-gradient(180deg, var(--gold), transparent);
+            animation: cueLine 2.2s ease-in-out infinite;
+        }
+
+        @keyframes cueLine {
+            0% { transform: scaleY(0); transform-origin: top; }
+            45% { transform: scaleY(1); transform-origin: top; }
+            55% { transform: scaleY(1); transform-origin: bottom; }
+            100% { transform: scaleY(0); transform-origin: bottom; }
+        }
+
+        /* ============================================================
+           MARQUEE
+        ============================================================ */
+        .marquee-wrap {
+            position: relative;
+            padding: 30px 0;
+            border-top: 1px solid var(--line-soft);
+            border-bottom: 1px solid var(--line-soft);
+            background: rgba(255, 255, 255, 0.015);
+            overflow: hidden;
+        }
+
+        .marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 30s linear infinite;
+        }
+
+        .marquee-group {
+            display: flex;
+            align-items: center;
+            gap: 46px;
+            padding-right: 46px;
+        }
+
+        .marquee-group span {
+            font-family: var(--font-display);
+            font-style: italic;
             font-size: 17px;
-
-            transition: .3s;
-
-            margin: 8px;
-
-            box-shadow:
-                0 10px 30px rgba(37,99,235,0.18);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            white-space: nowrap;
         }
 
-        .download-btn:hover {
-            transform: translateY(-4px) scale(1.02);
-
-            background: #4da3ff;
-
-            color: white;
-
-            box-shadow:
-                0 15px 40px rgba(37,99,235,0.4);
+        .marquee-group i {
+            color: var(--gold);
+            font-style: normal;
+            font-size: 12px;
+            opacity: 0.75;
         }
 
-        .info {
-            margin-top: 18px;
-
-            color: #8994a6;
-
-            font-size: 14px;
+        @keyframes marquee {
+            to { transform: translateX(-50%); }
         }
 
-        /* =========================
-           SECTIONS
-        ========================== */
-
+        /* ============================================================
+           SECTIONS / HEADINGS
+        ============================================================ */
         section {
-            padding: 85px 0;
+            position: relative;
+            padding: 110px 0;
         }
 
-        .section-title {
+        .section-head {
             text-align: center;
-
-            font-size: 36px;
-
-            margin-bottom: 45px;
+            max-width: 640px;
+            margin: 0 auto 64px;
         }
 
-        .section-title span {
-            color: #4da3ff;
-
-            text-shadow:
-                0 0 20px rgba(77,163,255,0.3);
-        }
-
-        /* =========================
-           FEATURES
-        ========================== */
-
-        .features {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 22px;
-        }
-
-        .feature {
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(18,25,39,.95),
-                    rgba(10,15,25,.95)
-                );
-
-            border: 1px solid #263653;
-
-            border-radius: 18px;
-
-            padding: 32px;
-
-            text-align: center;
-
-            transition: .3s;
-
-            box-shadow:
-                0 10px 30px rgba(0,0,0,.15);
-        }
-
-        .feature:hover {
-            transform: translateY(-8px);
-
-            border-color: #4da3ff;
-
-            box-shadow:
-                0 15px 40px rgba(37,99,235,.15);
-        }
-
-        .feature-icon {
-            font-size: 40px;
-
-            margin-bottom: 15px;
-
-            filter:
-                drop-shadow(
-                    0 0 10px
-                    rgba(77,163,255,.25)
-                );
-        }
-
-        .feature h3 {
-            margin-bottom: 10px;
-
-            font-size: 20px;
-        }
-
-        .feature p {
-            color: #9ca8ba;
-        }
-
-        /* =========================
-           ABOUT
-        ========================== */
-
-        .about {
-            background:
-                linear-gradient(
-                    180deg,
-                    #080c15,
-                    #0d1421
-                );
-        }
-
-        .about-box {
-            max-width: 850px;
-
-            margin: auto;
-
-            text-align: center;
-        }
-
-        .about-box p {
-            color: #aeb8c7;
-
-            font-size: 17px;
-
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gold-bright);
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
             margin-bottom: 18px;
         }
 
-        /* =========================
-           REVIEWS
-        ========================== */
-
-        .reviews-section {
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(37,99,235,.10),
-                    transparent 50%
-                );
+        .section-tag::before,
+        .section-tag::after {
+            content: "";
+            width: 34px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold));
         }
 
-        .rating-box {
-            max-width: 850px;
+        .section-tag::after {
+            background: linear-gradient(90deg, var(--gold), transparent);
+        }
 
+        .section-title {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: clamp(32px, 4.4vw, 50px);
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            margin-bottom: 18px;
+        }
+
+        .section-title em {
+            font-style: italic;
+            background: linear-gradient(115deg, var(--gold-bright), var(--violet-bright));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .section-sub {
+            color: var(--text-muted);
+            font-size: 17px;
+            font-weight: 300;
+        }
+
+        /* ============================================================
+           FEATURES
+        ============================================================ */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .feature {
+            position: relative;
+            padding: 40px 34px;
+            border-radius: var(--radius);
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+            border: 1px solid var(--line-soft);
+            backdrop-filter: blur(14px);
+            overflow: hidden;
+            transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.3, 1), border-color 0.45s ease, box-shadow 0.45s ease;
+        }
+
+        .feature::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(500px 180px at 50% -20%, rgba(139, 92, 246, 0.16), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.45s ease;
+        }
+
+        .feature::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 20%;
+            right: 20%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(216, 179, 106, 0.6), transparent);
+            opacity: 0;
+            transition: opacity 0.45s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-9px);
+            border-color: rgba(167, 139, 250, 0.4);
+            box-shadow: 0 26px 60px -18px rgba(139, 92, 246, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .feature:hover::before,
+        .feature:hover::after {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            position: relative;
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 24px;
+            background: linear-gradient(150deg, rgba(139, 92, 246, 0.16), rgba(216, 179, 106, 0.08));
+            border: 1px solid rgba(167, 139, 250, 0.3);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 10px 26px -10px rgba(139, 92, 246, 0.4);
+        }
+
+        .feature-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: url(#iconGrad);
+            fill: none;
+            stroke-width: 1.7;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            filter: drop-shadow(0 0 8px rgba(167, 139, 250, 0.55));
+        }
+
+        .feature h3 {
+            position: relative;
+            font-size: 20.5px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            margin-bottom: 12px;
+        }
+
+        .feature p {
+            position: relative;
+            color: var(--text-muted);
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .feature .num {
+            position: absolute;
+            top: 26px;
+            right: 28px;
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.14);
+            letter-spacing: 1px;
+        }
+
+        /* ============================================================
+           ABOUT
+        ============================================================ */
+        .about-section {
+            background: linear-gradient(180deg, transparent, rgba(139, 92, 246, 0.045) 30%, rgba(216, 179, 106, 0.03) 70%, transparent);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-emblem {
+            position: relative;
             margin: auto;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #121927,
-                    #090e18
-                );
-
-            border: 1px solid #263653;
-
-            border-radius: 22px;
-
-            padding: 38px;
-
-            box-shadow:
-                0 20px 50px rgba(0,0,0,.25);
+            width: 290px;
+            height: 290px;
+            display: grid;
+            place-items: center;
         }
 
-        .rating-summary {
-            text-align: center;
-
-            margin-bottom: 30px;
+        .about-emblem::before,
+        .about-emblem::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
         }
 
-        .rating-number strong {
+        .about-emblem::before {
+            inset: 0;
+            background: conic-gradient(from 90deg, rgba(216, 179, 106, 0.5), rgba(139, 92, 246, 0.4), transparent 60%, rgba(216, 179, 106, 0.5));
+            animation: spin 9s linear infinite;
+            -webkit-mask: radial-gradient(circle, transparent 62%, black 63%, black 66%, transparent 67%);
+            mask: radial-gradient(circle, transparent 62%, black 63%, black 66%, transparent 67%);
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .about-emblem::after {
+            inset: 36px;
+            background: radial-gradient(circle at 35% 25%, rgba(139, 92, 246, 0.3), rgba(12, 10, 23, 0.9) 60%);
+            border: 1px solid rgba(216, 179, 106, 0.35);
+            box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+        }
+
+        .about-emblem span {
+            position: relative;
+            z-index: 2;
+            font-family: var(--font-display);
+            font-size: 62px;
+            font-weight: 600;
+            background: linear-gradient(140deg, var(--gold-bright), var(--violet-bright));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: emblemGlow 4.5s ease-in-out infinite;
+        }
+
+        @keyframes emblemGlow {
+            0%, 100% { filter: drop-shadow(0 0 14px rgba(216, 179, 106, 0.35)); }
+            50% { filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.55)); }
+        }
+
+        .about-copy .section-title {
+            text-align: left;
+            margin-bottom: 26px;
+        }
+
+        .about-copy p {
+            color: var(--text-muted);
+            font-size: 16.5px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .about-copy p:first-of-type::first-letter {
+            font-family: var(--font-display);
+            font-size: 58px;
+            line-height: 0.85;
+            float: left;
+            padding: 8px 12px 0 0;
+            color: var(--gold-bright);
+        }
+
+        .about-quote {
+            margin-top: 30px;
+            padding: 24px 30px;
+            border-left: 2px solid var(--gold);
+            border-radius: 0 18px 18px 0;
+            background: rgba(216, 179, 106, 0.05);
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 19px;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .about-quote small {
             display: block;
-
-            font-size: 52px;
-        }
-
-        .stars {
-            color: #4da3ff;
-
-            font-size: 30px;
-
+            margin-top: 10px;
+            font-family: var(--font-body);
+            font-style: normal;
+            font-size: 12px;
             letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
         }
 
-        .rating-number p {
-            color: #8994a6;
+        /* ============================================================
+           REVIEWS
+        ============================================================ */
+        .reviews-wrap {
+            position: relative;
+            max-width: 880px;
+            margin: auto;
+            padding: 54px;
+            border-radius: 30px;
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+            border: 1px solid var(--line);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+            overflow: hidden;
+        }
 
-            font-size: 14px;
+        .reviews-wrap::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0.8;
+        }
+
+        .rating-header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 40px;
+            align-items: center;
+            padding-bottom: 36px;
+            margin-bottom: 36px;
+            border-bottom: 1px solid var(--line-soft);
+        }
+
+        .rating-ring {
+            position: relative;
+            width: 132px;
+            height: 132px;
+        }
+
+        .rating-ring svg {
+            width: 132px;
+            height: 132px;
+            transform: rotate(-90deg);
+        }
+
+        .rating-ring .track {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.08);
+            stroke-width: 7;
+        }
+
+        .rating-ring .bar {
+            fill: none;
+            stroke: url(#ringGrad);
+            stroke-width: 7;
+            stroke-linecap: round;
+            stroke-dasharray: 339.29;
+            stroke-dashoffset: 339.29;
+            transition: stroke-dashoffset 1.2s cubic-bezier(0.2, 0.8, 0.3, 1);
+            filter: drop-shadow(0 0 8px rgba(216, 179, 106, 0.5));
+        }
+
+        .rating-ring .ring-value {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            text-align: center;
+        }
+
+        .rating-ring .ring-value strong {
+            font-size: 38px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            background: linear-gradient(120deg, #fff, var(--violet-bright));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .rating-ring .ring-value span {
+            font-size: 10.5px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text-dim);
+        }
+
+        .rating-info h3 {
+            font-family: var(--font-display);
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .rating-info .stars {
+            font-size: 24px;
+            letter-spacing: 4px;
+            color: var(--gold-bright);
+            text-shadow: 0 0 16px rgba(216, 179, 106, 0.5);
+            margin-bottom: 6px;
+        }
+
+        .rating-info p {
+            color: var(--text-muted);
+            font-size: 14.5px;
         }
 
         .review-form {
             display: grid;
-
-            gap: 15px;
+            gap: 18px;
         }
 
         .review-form input,
         .review-form textarea {
             width: 100%;
-
-            padding: 14px 16px;
-
-            border-radius: 10px;
-
-            border: 1px solid #293852;
-
-            background: #080d16;
-
-            color: white;
-
+            padding: 16px 20px;
+            border-radius: 14px;
+            border: 1px solid var(--line);
+            background: rgba(8, 6, 16, 0.65);
+            color: var(--text);
+            font-family: var(--font-body);
             font-size: 15px;
-
             outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .review-form input::placeholder,
+        .review-form textarea::placeholder {
+            color: var(--text-dim);
         }
 
         .review-form input:focus,
         .review-form textarea:focus {
-            border-color: #4da3ff;
-
-            box-shadow:
-                0 0 15px
-                rgba(77,163,255,.12);
+            border-color: rgba(167, 139, 250, 0.6);
+            background: rgba(12, 9, 24, 0.85);
+            box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.12), 0 0 24px -6px rgba(139, 92, 246, 0.35);
         }
 
         .review-form textarea {
-            min-height: 110px;
-
+            min-height: 120px;
             resize: vertical;
         }
 
         .star-selector {
             display: flex;
-
             justify-content: center;
-
-            gap: 8px;
+            gap: 10px;
+            padding: 6px 0;
         }
 
         .star-selector button {
             background: transparent;
-
             border: none;
-
-            color: #39465c;
-
-            font-size: 32px;
-
+            color: rgba(255, 255, 255, 0.16);
+            font-size: 34px;
             cursor: pointer;
-
-            transition: .2s;
+            transition: transform 0.25s ease, color 0.25s ease, text-shadow 0.25s ease;
         }
 
-        .star-selector button:hover,
+        .star-selector button:hover {
+            transform: scale(1.2);
+            color: rgba(240, 215, 149, 0.7);
+        }
+
         .star-selector button.active {
-            color: #4da3ff;
-
-            transform: scale(1.15);
+            color: var(--gold-bright);
+            transform: scale(1.12);
+            text-shadow: 0 0 18px rgba(216, 179, 106, 0.65);
         }
 
-        .submit-review {
-            border: none;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #2563eb,
-                    #3b82f6
-                );
-
-            color: white;
-
-            padding: 14px 25px;
-
-            border-radius: 10px;
-
-            font-size: 16px;
-
-            font-weight: bold;
-
-            cursor: pointer;
-
-            transition: .3s;
+        .submit-row {
+            display: flex;
+            justify-content: center;
         }
 
-        .submit-review:hover {
-            transform: translateY(-2px);
-
-            box-shadow:
-                0 10px 25px
-                rgba(37,99,235,.3);
-        }
-
+        /* Review cards */
         .reviews-list {
-            margin-top: 30px;
-
+            margin-top: 40px;
             display: grid;
+            gap: 16px;
+            max-height: 420px;
+            overflow-y: auto;
+            padding-right: 6px;
+        }
 
-            gap: 15px;
+        .reviews-list::-webkit-scrollbar {
+            width: 6px;
         }
 
         .review-card {
-            background: #080d16;
-
-            border: 1px solid #202d43;
-
-            border-radius: 14px;
-
-            padding: 20px;
+            display: flex;
+            gap: 18px;
+            padding: 22px 24px;
+            border-radius: 18px;
+            background: rgba(8, 6, 16, 0.55);
+            border: 1px solid var(--line-soft);
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
-        .review-card strong {
-            color: white;
+        .review-card:hover {
+            transform: translateX(6px);
+            border-color: rgba(167, 139, 250, 0.35);
         }
 
-        .review-card .review-stars {
-            color: #4da3ff;
-
-            margin: 5px 0;
+        .review-avatar {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            font-size: 17px;
+            color: #fff;
+            background: linear-gradient(140deg, var(--violet), var(--gold-deep));
+            box-shadow: 0 8px 20px -6px rgba(139, 92, 246, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
         }
 
-        .review-card p {
-            color: #aeb8c7;
+        .review-body {
+            min-width: 0;
         }
 
-        /* =========================
-           DOWNLOAD SECTION
-        ========================== */
+        .review-body strong {
+            display: block;
+            font-size: 15.5px;
+            margin-bottom: 3px;
+        }
 
-        .download-section {
+        .review-body .meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .review-body .review-stars {
+            color: var(--gold-bright);
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .review-body .date {
+            color: var(--text-dim);
+            font-size: 12px;
+            letter-spacing: 0.4px;
+        }
+
+        .review-body p {
+            color: var(--text-muted);
+            font-size: 14.5px;
+            font-weight: 300;
+        }
+
+        .empty-reviews {
             text-align: center;
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(37,99,235,.15),
-                    transparent 55%
-                );
+            color: var(--text-dim);
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 17px;
+            padding: 10px 0 4px;
         }
 
-        .download-section p {
-            color: #aeb8c7;
-
-            margin-bottom: 25px;
+        /* ============================================================
+           DOWNLOAD
+        ============================================================ */
+        .download-section {
+            padding: 120px 0 130px;
         }
 
         .download-card {
-            max-width: 600px;
-
+            position: relative;
+            max-width: 760px;
             margin: auto;
-
-            padding: 38px;
-
+            padding: 64px 56px;
+            text-align: center;
+            border-radius: 32px;
             background:
-                linear-gradient(
-                    145deg,
-                    #121927,
-                    #0b101b
-                );
+                radial-gradient(600px 220px at 50% -10%, rgba(139, 92, 246, 0.22), transparent 70%),
+                linear-gradient(165deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+            border: 1px solid var(--line);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+            overflow: hidden;
+        }
 
-            border: 1px solid #293852;
+        .download-card::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: 34px;
+            padding: 1.5px;
+            background: linear-gradient(140deg, rgba(216, 179, 106, 0.8), transparent 30%, transparent 65%, rgba(139, 92, 246, 0.8));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
 
-            border-radius: 20px;
-
-            box-shadow:
-                0 20px 50px rgba(0,0,0,.2);
+        .dl-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 22px;
+            border-radius: 60px;
+            background: rgba(216, 179, 106, 0.08);
+            border: 1px solid rgba(216, 179, 106, 0.3);
+            color: var(--gold-bright);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 28px;
         }
 
         .download-card h3 {
-            font-size: 25px;
-
+            font-family: var(--font-display);
+            font-size: clamp(30px, 4vw, 42px);
+            font-weight: 600;
             margin-bottom: 12px;
         }
 
-        .download-details {
-            color: #9ca8ba;
+        .download-card>p {
+            color: var(--text-muted);
+            font-size: 16.5px;
+            font-weight: 300;
+            margin-bottom: 34px;
+        }
 
+        .dl-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 36px;
+        }
+
+        .dl-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 60px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--line-soft);
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .dl-chip b {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .dl-chip .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+            box-shadow: 0 0 8px rgba(216, 179, 106, 0.8);
+        }
+
+        .dl-note {
+            margin-top: 24px;
+            color: var(--text-dim);
+            font-size: 13px;
+        }
+
+        /* ============================================================
+           FOOTER
+        ============================================================ */
+        footer {
+            padding: 70px 0 40px;
+            border-top: 1px solid var(--line-soft);
+            background: linear-gradient(180deg, transparent, rgba(9, 7, 20, 0.9));
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 54px;
+        }
+
+        .footer-brand p {
+            margin-top: 16px;
+            color: var(--text-dim);
+            font-size: 14.5px;
+            font-weight: 300;
+            max-width: 340px;
+        }
+
+        .footer-col h4 {
+            font-size: 12.5px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
             margin-bottom: 20px;
         }
 
-        /* =========================
-           FOOTER
-        ========================== */
-
-        footer {
-            padding: 30px 0;
-
-            text-align: center;
-
-            background: #05070d;
-
-            color: #788496;
-
-            font-size: 14px;
+        .footer-col ul {
+            list-style: none;
+            display: grid;
+            gap: 12px;
         }
 
-        /* =========================
-           MOBILE
-        ========================== */
+        .footer-col a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14.5px;
+            font-weight: 300;
+            transition: color 0.3s ease, padding-left 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: var(--gold-bright);
+            padding-left: 6px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding-top: 30px;
+            border-top: 1px solid var(--line-soft);
+            color: var(--text-dim);
+            font-size: 13.5px;
+            font-weight: 300;
+        }
+
+        .footer-bottom .sep {
+            color: var(--gold);
+            margin: 0 10px;
+        }
+
+        /* ============================================================
+           TOAST
+        ============================================================ */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translate(-50%, 140%);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 26px;
+            border-radius: 60px;
+            background: rgba(14, 11, 26, 0.92);
+            border: 1px solid rgba(216, 179, 106, 0.4);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.7), 0 0 30px -8px rgba(216, 179, 106, 0.35);
+            font-size: 14.5px;
+            font-weight: 500;
+            transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.3, 1);
+        }
+
+        .toast.show {
+            transform: translate(-50%, 0);
+        }
+
+        .toast .t-ico {
+            color: var(--gold-bright);
+            font-size: 17px;
+        }
+
+        /* ============================================================
+           REVEAL ANIMATIONS
+        ============================================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.3, 1), transform 0.9s cubic-bezier(0.2, 0.8, 0.3, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* ============================================================
+           RESPONSIVE
+        ============================================================ */
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 80px;
+                text-align: center;
+            }
+            .hero-sub {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .hero-frame {
+                max-width: 560px;
+                margin: auto;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            .about-copy .section-title {
+                text-align: center;
+            }
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
 
         @media (max-width: 768px) {
-
-            .top-logo {
-                position: relative;
-
-                top: auto;
-                left: auto;
-
-                width: fit-content;
-
-                margin: 18px auto 0;
+            .nav-links {
+                display: none;
             }
-
             .hero {
                 min-height: auto;
-
-                padding:
-                    45px 0 80px;
+                padding: 130px 0 70px;
             }
-
-            .hero h1 {
-                font-size: 40px;
+            section {
+                padding: 80px 0;
             }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .section-title {
-                font-size: 29px;
-            }
-
             .features {
                 grid-template-columns: 1fr;
             }
-
-            .download-btn {
-                width: 90%;
-
-                max-width: 320px;
+            .rating-header {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                text-align: center;
+                gap: 24px;
             }
-
-            .rating-box {
-                padding: 25px 18px;
+            .reviews-wrap {
+                padding: 36px 22px;
             }
-
-            .brand-name {
-                font-size: 13px;
+            .download-card {
+                padding: 48px 24px;
             }
-
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+            .footer-bottom {
+                justify-content: center;
+                text-align: center;
+            }
+            .float-chip {
+                display: none;
+            }
+            .scroll-cue {
+                display: none;
+            }
         }
 
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            .btn {
+                width: 100%;
+                max-width: 340px;
+            }
+            .hero-actions {
+                flex-direction: column;
+            }
+            .dl-meta {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- =========================
-         LOGO
-    ========================== -->
+    <!-- aurora backdrop -->
+    <div class="aurora" aria-hidden="true">
+        <span></span><span></span><span></span>
+    </div>
+    <div class="grid-overlay" aria-hidden="true"></div>
 
-    <a href="#" class="top-logo">
+    <!-- shared svg gradients -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#c4b5fd" />
+                <stop offset="55%" stop-color="#a78bfa" />
+                <stop offset="100%" stop-color="#f0d795" />
+            </linearGradient>
+            <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8b5cf6" />
+                <stop offset="100%" stop-color="#f0d795" />
+            </linearGradient>
+        </defs>
+    </svg>
 
-        <div class="brand-mark">
-
-            <div class="brand-ring"></div>
-
-            <div class="brand-letter">
-                A<span>G</span>
-            </div>
-
-        </div>
-
-        <div class="brand-name">
-
-            <div>ALL-IN-ONE</div>
-
-            <small>GAMES</small>
-
-        </div>
-
-    </a>
-
-
-    <!-- =========================
-         HERO
-    ========================== -->
-
-    <header class="hero">
-
-        <div class="container hero-content">
-
-            <div class="badge">
-                🎮 Android Gaming App
-            </div>
-
-            <h1>
-                All-in-One <span>Games</span>
-            </h1>
-
-            <p>
-                Discover multiple interesting and traditional
-                games in one simple and enjoyable Android app.
-            </p>
-
-            <a
-                class="download-btn sound-btn"
-                href="https://github.com/shaklainansari777-pixel/All-in-one-game.shaklain/releases/download/v1.0.0/all.in.one.game.apk"
-                target="_blank"
-                rel="noopener"
-            >
-                📥 Download APK
+    <!-- ============================================================
+         NAVBAR
+    ============================================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#top" class="brand">
+                <div class="brand-mark">
+                    <span class="brand-letter">AG</span>
+                </div>
+                <div class="brand-name">
+                    <strong>ALL-IN-ONE</strong>
+                    <small>Games</small>
+                </div>
             </a>
 
-            <div class="info">
-                Version 1.0.0
-                &nbsp; • &nbsp;
-                31.7 MB
-                &nbsp; • &nbsp;
-                Android
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+
+            <a
+                href="#download"
+                class="btn btn-gold btn-sm nav-cta sound-btn"
+            >
+                Download APK
+            </a>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <header class="hero" id="top">
+        <div class="container hero-grid">
+
+            <div class="hero-copy reveal">
+                <div class="eyebrow">Premium Android Gaming</div>
+
+                <h1>
+                    All-in-One
+                    <br>
+                    <em>Games</em>
+                </h1>
+
+                <p class="hero-sub">
+                    A curated collection of <strong>classic and traditional
+                    games</strong>, crafted into one elegant app —
+                    download it once, play forever.
+                </p>
+
+                <div class="hero-actions">
+                    <a
+                        class="btn btn-gold sound-btn"
+                        href="https://github.com/shaklainansari777-pixel/All-in-one-game.shaklain/releases/download/v1.0.0/all.in.one.game.apk"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Download APK
+                    </a>
+                    <a href="#features" class="btn btn-ghost">
+                        Explore the App
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>v1.0.0</strong>
+                        <span>Version</span>
+                    </div>
+                    <div class="stat">
+                        <strong>31.7 MB</strong>
+                        <span>Size</span>
+                    </div>
+                    <div class="stat">
+                        <strong>Android</strong>
+                        <span>Platform</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal reveal-delay-2">
+                <div class="hero-frame">
+                    <img
+                        src="assets/hero-controller.webp"
+                        alt="Premium gaming controller with violet and gold glow"
+                        loading="eager"
+                    >
+                </div>
+
+                <div class="float-chip chip-1">
+                    <span class="ico">🎮</span> Multi-Game
+                </div>
+                <div class="float-chip chip-2">
+                    <span class="ico">✨</span> Free APK
+                </div>
+                <div class="float-chip chip-3">
+                    <span class="ico">📱</span> Android Ready
+                </div>
             </div>
 
         </div>
 
+        <div class="scroll-cue">Scroll</div>
     </header>
 
+    <!-- ============================================================
+         MARQUEE
+    ============================================================ -->
+    <div class="marquee-wrap" aria-hidden="true">
+        <div class="marquee">
+            <div class="marquee-group">
+                <span>Classic Games</span><i>✦</i>
+                <span>Traditional Games</span><i>✦</i>
+                <span>Instant Fun</span><i>✦</i>
+                <span>One App</span><i>✦</i>
+                <span>Free To Play</span><i>✦</i>
+                <span>Android</span><i>✦</i>
+            </div>
+            <div class="marquee-group">
+                <span>Classic Games</span><i>✦</i>
+                <span>Traditional Games</span><i>✦</i>
+                <span>Instant Fun</span><i>✦</i>
+                <span>One App</span><i>✦</i>
+                <span>Free To Play</span><i>✦</i>
+                <span>Android</span><i>✦</i>
+            </div>
+        </div>
+    </div>
 
-    <!-- =========================
+    <!-- ============================================================
          FEATURES
-    ========================== -->
-
-    <section>
-
+    ============================================================ -->
+    <section id="features">
         <div class="container">
 
-            <h2 class="section-title">
-                Why Play <span>All-in-One Games?</span>
-            </h2>
+            <div class="section-head reveal">
+                <div class="section-tag">The Experience</div>
+                <h2 class="section-title">
+                    Why Players Love <em>All-in-One Games</em>
+                </h2>
+                <p class="section-sub">
+                    Everything you need for a premium gaming moment —
+                    beautifully simple, delightfully entertaining.
+                </p>
+            </div>
 
             <div class="features">
 
-                <div class="feature">
-                    <div class="feature-icon">🎮</div>
+                <div class="feature reveal">
+                    <span class="num">01</span>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M6 12h4m-2-2v4M15 11h.01M18 13h.01M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>
+                    </div>
                     <h3>Multiple Games</h3>
                     <p>
-                        Enjoy different types of interesting
-                        games from one convenient application.
+                        A curated collection of classic and casual games,
+                        all inside one beautifully built app.
                     </p>
                 </div>
 
-                <div class="feature">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Quick & Easy</h3>
+                <div class="feature reveal reveal-delay-1">
+                    <span class="num">02</span>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h3>Quick &amp; Easy</h3>
                     <p>
-                        Simple controls and an easy-to-use
-                        interface make gaming enjoyable.
+                        Tap, play, and enjoy — simple controls designed
+                        for instant, effortless fun.
                     </p>
                 </div>
 
-                <div class="feature">
-                    <div class="feature-icon">🧠</div>
+                <div class="feature reveal reveal-delay-2">
+                    <span class="num">03</span>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                    </div>
                     <h3>Challenge Your Mind</h3>
                     <p>
-                        Play fun games designed to keep you
-                        entertained and challenged.
+                        Sharpen your skills with games that reward
+                        clever thinking and steady practice.
                     </p>
                 </div>
 
-                <div class="feature">
-                    <div class="feature-icon">📱</div>
+                <div class="feature reveal">
+                    <span class="num">04</span>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    </div>
                     <h3>Mobile Friendly</h3>
                     <p>
-                        Enjoy the gaming experience directly
-                        on your Android device.
+                        Optimized for Android phones and tablets,
+                        large or small — it just feels right.
                     </p>
                 </div>
 
-                <div class="feature">
-                    <div class="feature-icon">🚀</div>
+                <div class="feature reveal reveal-delay-1">
+                    <span class="num">05</span>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                    </div>
                     <h3>Simple Experience</h3>
                     <p>
-                        Open the app and start playing without
-                        unnecessary complexity.
+                        No clutter, no friction — open the app and
+                        you're playing within seconds.
                     </p>
                 </div>
 
-                <div class="feature">
-                    <div class="feature-icon">🎯</div>
+                <div class="feature reveal reveal-delay-2">
+                    <span class="num">06</span>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    </div>
                     <h3>Fun Anytime</h3>
                     <p>
-                        Perfect for short breaks or longer
-                        gaming sessions.
+                        Perfect for quick breaks, commutes, or long,
+                        cozy gaming sessions — whenever you like.
                     </p>
                 </div>
 
             </div>
 
         </div>
-
     </section>
 
-
-    <!-- =========================
+    <!-- ============================================================
          ABOUT
-    ========================== -->
+    ============================================================ -->
+    <section class="about-section" id="about">
+        <div class="container about-grid">
 
-    <section class="about">
+            <div class="about-emblem reveal">
+                <span>AG</span>
+            </div>
 
-        <div class="container">
-
-            <div class="about-box">
-
+            <div class="about-copy reveal reveal-delay-1">
+                <div class="section-tag">The Vision</div>
                 <h2 class="section-title">
-                    About <span>the App</span>
+                    One App. <em>Endless</em> Classic Entertainment.
                 </h2>
 
                 <p>
-                    All-in-One Games brings different entertaining
-                    and traditional games together in one Android app.
+                    All-in-One Games brings different entertaining and
+                    traditional games together in a single, thoughtfully
+                    designed Android app — so the games you love live
+                    in one place, not scattered across the store.
                 </p>
 
                 <p>
-                    Whether you want to enjoy a quick game during
-                    a break or spend more time playing, the app is
-                    designed to provide a simple and enjoyable experience.
+                    Whether you want a quick game during a break or a
+                    longer session at the end of the day, everything is
+                    designed to feel simple, smooth, and enjoyable from
+                    the very first tap.
                 </p>
 
-                <p>
-                    Download the APK and discover the games
-                    available inside the application.
-                </p>
-
+                <div class="about-quote">
+                    "Download the APK and discover a world of classic
+                    games — crafted into one premium experience."
+                    <small>— The All-in-One Games Team</small>
+                </div>
             </div>
 
         </div>
-
     </section>
 
-
-    <!-- =========================
+    <!-- ============================================================
          RATINGS & REVIEWS
-    ========================== -->
-
-    <section class="reviews-section">
-
+    ============================================================ -->
+    <section id="reviews">
         <div class="container">
 
-            <h2 class="section-title">
-                Ratings & <span>Reviews</span>
-            </h2>
+            <div class="section-head reveal">
+                <div class="section-tag">Community</div>
+                <h2 class="section-title">
+                    Ratings &amp; <em>Reviews</em>
+                </h2>
+                <p class="section-sub">
+                    Share your experience and see what other players think.
+                </p>
+            </div>
 
-            <div class="rating-box">
+            <div class="reviews-wrap reveal">
 
-                <div class="rating-summary">
+                <div class="rating-header">
 
-                    <div class="rating-number">
-
-                        <strong id="averageRating">
-                            0.0
-                        </strong>
-
-                        <div
-                            class="stars"
-                            id="averageStars"
-                        >
-                            ☆☆☆☆☆
+                    <div class="rating-ring">
+                        <svg viewBox="0 0 120 120">
+                            <circle class="track" cx="60" cy="60" r="54"></circle>
+                            <circle class="bar" id="ratingBar" cx="60" cy="60" r="54"></circle>
+                        </svg>
+                        <div class="ring-value">
+                            <div>
+                                <strong id="averageRating">0.0</strong>
+                                <span id="reviewCount">0 reviews</span>
+                            </div>
                         </div>
+                    </div>
 
-                        <p id="reviewCount">
-                            0 reviews
+                    <div class="rating-info">
+                        <h3>Player Reviews</h3>
+                        <div class="stars" id="averageStars">☆☆☆☆☆</div>
+                        <p>
+                            Your rating helps others discover the app.
+                            Tell us what you think below.
                         </p>
-
                     </div>
 
                 </div>
 
-
-                <form
-                    class="review-form"
-                    id="reviewForm"
-                >
+                <form class="review-form" id="reviewForm">
 
                     <input
                         type="text"
@@ -1086,49 +1932,13 @@
                         required
                     >
 
-
-                    <div
-                        class="star-selector"
-                        id="starSelector"
-                    >
-
-                        <button
-                            type="button"
-                            data-rating="1"
-                        >
-                            ★
-                        </button>
-
-                        <button
-                            type="button"
-                            data-rating="2"
-                        >
-                            ★
-                        </button>
-
-                        <button
-                            type="button"
-                            data-rating="3"
-                        >
-                            ★
-                        </button>
-
-                        <button
-                            type="button"
-                            data-rating="4"
-                        >
-                            ★
-                        </button>
-
-                        <button
-                            type="button"
-                            data-rating="5"
-                        >
-                            ★
-                        </button>
-
+                    <div class="star-selector" id="starSelector">
+                        <button type="button" data-rating="1" aria-label="1 star">★</button>
+                        <button type="button" data-rating="2" aria-label="2 stars">★</button>
+                        <button type="button" data-rating="3" aria-label="3 stars">★</button>
+                        <button type="button" data-rating="4" aria-label="4 stars">★</button>
+                        <button type="button" data-rating="5" aria-label="5 stars">★</button>
                     </div>
-
 
                     <textarea
                         id="reviewText"
@@ -1137,513 +1947,393 @@
                         required
                     ></textarea>
 
-
-                    <button
-                        type="submit"
-                        class="submit-review sound-btn"
-                    >
-                        Submit Review
-                    </button>
+                    <div class="submit-row">
+                        <button type="submit" class="btn btn-gold sound-btn">
+                            Submit Review
+                        </button>
+                    </div>
 
                 </form>
 
-
-                <div
-                    class="reviews-list"
-                    id="reviewsList"
-                ></div>
+                <div class="reviews-list" id="reviewsList"></div>
 
             </div>
 
         </div>
-
     </section>
 
-
-    <!-- =========================
+    <!-- ============================================================
          DOWNLOAD
-    ========================== -->
-
-    <section class="download-section">
-
+    ============================================================ -->
+    <section class="download-section" id="download">
         <div class="container">
 
-            <h2 class="section-title">
-                Ready to <span>Play?</span>
-            </h2>
+            <div class="download-card reveal">
 
-            <p>
-                Download All-in-One Games and start playing today.
-            </p>
-
-
-            <div class="download-card">
-
-                <h3>
-                    All-in-One Games
-                </h3>
-
-                <div class="download-details">
-
-                    Android APK
-                    <br>
-
-                    Version: 1.0.0
-                    <br>
-
-                    File size: 31.7 MB
-
+                <div class="dl-badge">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Ready When You Are
                 </div>
 
+                <h3>Start Playing Today</h3>
+
+                <p>
+                    Download the All-in-One Games APK and dive straight
+                    into a premium collection of classic games.
+                </p>
+
+                <div class="dl-meta">
+                    <span class="dl-chip"><span class="dot"></span><b>Android</b> APK</span>
+                    <span class="dl-chip"><span class="dot"></span>Version <b>&nbsp;1.0.0</b></span>
+                    <span class="dl-chip"><span class="dot"></span>Size <b>&nbsp;31.7 MB</b></span>
+                </div>
 
                 <a
-                    class="download-btn sound-btn"
+                    class="btn btn-gold sound-btn"
                     href="https://github.com/shaklainansari777-pixel/All-in-one-game.shaklain/releases/download/v1.0.0/all.in.one.game.apk"
                     target="_blank"
                     rel="noopener"
                 >
-                    📥 Download APK
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Download APK
                 </a>
+
+                <div class="dl-note">
+                    Free to download · No sign-up required · Install and play instantly
+                </div>
 
             </div>
 
         </div>
-
     </section>
 
-
-    <!-- =========================
+    <!-- ============================================================
          FOOTER
-    ========================== -->
-
+    ============================================================ -->
     <footer>
-
         <div class="container">
+            <div class="footer-grid">
 
-            <p>
-                © 2026 All-in-One Games.
-                All rights reserved.
-            </p>
+                <div class="footer-brand">
+                    <a href="#top" class="brand">
+                        <div class="brand-mark">
+                            <span class="brand-letter">AG</span>
+                        </div>
+                        <div class="brand-name">
+                            <strong>ALL-IN-ONE</strong>
+                            <small>Games</small>
+                        </div>
+                    </a>
+                    <p>
+                        A premium collection of classic and traditional
+                        games, thoughtfully brought together in one
+                        elegant Android app.
+                    </p>
+                </div>
 
-            <p>
-                Android gaming application.
-            </p>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#top">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                    </ul>
+                </div>
 
+                <div class="footer-col">
+                    <h4>Get the App</h4>
+                    <ul>
+                        <li><a href="https://github.com/shaklainansari777-pixel/All-in-one-game.shaklain/releases/download/v1.0.0/all.in.one.game.apk" target="_blank" rel="noopener">Download APK</a></li>
+                        <li><a href="https://github.com/shaklainansari777-pixel/All-in-one-game.shaklain" target="_blank" rel="noopener">GitHub Repository</a></li>
+                        <li><a href="#download">Version 1.0.0</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © 2026 All-in-One Games<span class="sep">✦</span>All rights reserved.
+                </p>
+                <p>Crafted for Android gamers.</p>
+            </div>
         </div>
-
     </footer>
 
-
-    <!-- =========================
-         SOUND EFFECTS + REVIEWS
-    ========================== -->
+    <!-- toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <span class="t-ico">✦</span>
+        <span id="toastMsg">Done</span>
+    </div>
 
     <script>
-
-        /* =========================
-           SIMPLE CLICK SOUND
-        ========================== */
-
-        let audioContext;
+        /* ============================================================
+           PREMIUM CLICK SOUND
+        ============================================================ */
+        let audioContext = null;
 
         function playClickSound() {
-
             try {
-
                 if (!audioContext) {
-
-                    audioContext =
-                        new (
-                            window.AudioContext ||
-                            window.webkitAudioContext
-                        )();
-
+                    const Ctx = window.AudioContext || window.webkitAudioContext;
+                    if (!Ctx) return;
+                    audioContext = new Ctx();
+                }
+                if (audioContext.state === "suspended") {
+                    audioContext.resume();
                 }
 
-                const oscillator =
-                    audioContext.createOscillator();
+                const now = audioContext.currentTime;
 
-                const gain =
-                    audioContext.createGain();
-
-                oscillator.type = "sine";
-
-                oscillator.frequency.setValueAtTime(
-                    520,
-                    audioContext.currentTime
-                );
-
-                oscillator.frequency.exponentialRampToValueAtTime(
-                    760,
-                    audioContext.currentTime + 0.08
-                );
-
-                gain.gain.setValueAtTime(
-                    0.08,
-                    audioContext.currentTime
-                );
-
-                gain.gain.exponentialRampToValueAtTime(
-                    0.001,
-                    audioContext.currentTime + 0.1
-                );
-
-                oscillator.connect(gain);
-
-                gain.connect(
-                    audioContext.destination
-                );
-
-                oscillator.start();
-
-                oscillator.stop(
-                    audioContext.currentTime + 0.1
-                );
-
+                // shimmering two-tone chime
+                [[660, 0, 0.12], [990, 0.05, 0.16]].forEach(([freq, delay, dur]) => {
+                    const osc = audioContext.createOscillator();
+                    const gain = audioContext.createGain();
+                    osc.type = "sine";
+                    osc.frequency.setValueAtTime(freq, now + delay);
+                    gain.gain.setValueAtTime(0.0001, now + delay);
+                    gain.gain.exponentialRampToValueAtTime(0.09, now + delay + 0.015);
+                    gain.gain.exponentialRampToValueAtTime(0.0001, now + delay + dur);
+                    osc.connect(gain);
+                    gain.connect(audioContext.destination);
+                    osc.start(now + delay);
+                    osc.stop(now + delay + dur + 0.02);
+                });
             } catch (error) {
-
-                console.log(
-                    "Sound unavailable"
-                );
-
+                /* sound unavailable */
             }
-
         }
 
-
-        document
-            .querySelectorAll(".sound-btn")
-            .forEach(button => {
-
-                button.addEventListener(
-                    "click",
-                    playClickSound
-                );
-
-            });
-
-
-        /* =========================
-           REVIEWS
-        ========================== */
-
-        let selectedRating = 0;
-
-
-        const starButtons =
-            document.querySelectorAll(
-                "#starSelector button"
-            );
-
-
-        starButtons.forEach(button => {
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    selectedRating =
-                        Number(
-                            button.dataset.rating
-                        );
-
-
-                    starButtons.forEach(
-                        star => {
-
-                            const rating =
-                                Number(
-                                    star.dataset.rating
-                                );
-
-                            star.classList.toggle(
-                                "active",
-                                rating <=
-                                selectedRating
-                            );
-
-                        }
-                    );
-
-                    playClickSound();
-
-                }
-            );
-
+        document.querySelectorAll(".sound-btn").forEach((el) => {
+            el.addEventListener("click", playClickSound);
         });
 
+        /* ============================================================
+           NAVBAR SCROLL STATE
+        ============================================================ */
+        const navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", () => {
+            navbar.classList.toggle("scrolled", window.scrollY > 40);
+        }, { passive: true });
+
+        /* ============================================================
+           SCROLL REVEAL
+        ============================================================ */
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+        );
+
+        document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+        /* ============================================================
+           TOAST
+        ============================================================ */
+        let toastTimer = null;
+
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            document.getElementById("toastMsg").textContent = message;
+            toast.classList.add("show");
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toast.classList.remove("show"), 2800);
+        }
+
+        /* ============================================================
+           REVIEWS
+        ============================================================ */
+        let selectedRating = 0;
+
+        const starButtons = document.querySelectorAll("#starSelector button");
+
+        starButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                selectedRating = Number(button.dataset.rating);
+                starButtons.forEach((star) => {
+                    star.classList.toggle("active", Number(star.dataset.rating) <= selectedRating);
+                });
+                playClickSound();
+            });
+        });
 
         function getReviews() {
-
-            return JSON.parse(
-                localStorage.getItem(
-                    "allInOneReviews"
-                ) || "[]"
-            );
-
+            try {
+                return JSON.parse(localStorage.getItem("allInOneReviews") || "[]");
+            } catch (e) {
+                return [];
+            }
         }
-
 
         function saveReviews(reviews) {
-
-            localStorage.setItem(
-                "allInOneReviews",
-                JSON.stringify(reviews)
-            );
-
+            localStorage.setItem("allInOneReviews", JSON.stringify(reviews));
         }
 
+        const AVATAR_GRADIENTS = [
+            "linear-gradient(140deg, #8b5cf6, #6d28d9)",
+            "linear-gradient(140deg, #d8b36a, #9c7a35)",
+            "linear-gradient(140deg, #a78bfa, #5b21b6)",
+            "linear-gradient(140deg, #f0d795, #b98f45)",
+            "linear-gradient(140deg, #7c6bd6, #43318f)"
+        ];
 
-        function displayReviews() {
+        function initials(name) {
+            const parts = name.trim().split(/\s+/);
+            const first = parts[0] ? parts[0][0] : "?";
+            const last = parts.length > 1 ? parts[parts.length - 1][0] : "";
+            return (first + last).toUpperCase();
+        }
 
-            const reviews =
-                getReviews();
+        function avatarColor(name) {
+            let hash = 0;
+            for (let i = 0; i < name.length; i++) {
+                hash = (hash * 31 + name.charCodeAt(i)) >>> 0;
+            }
+            return AVATAR_GRADIENTS[hash % AVATAR_GRADIENTS.length];
+        }
 
+        function formatDate(iso) {
+            try {
+                return new Date(iso).toLocaleDateString(undefined, {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric"
+                });
+            } catch (e) {
+                return "";
+            }
+        }
 
-            const list =
-                document.getElementById(
-                    "reviewsList"
-                );
+        function updateRatingDisplay(reviews) {
+            const count = document.getElementById("reviewCount");
+            const average = document.getElementById("averageRating");
+            const averageStars = document.getElementById("averageStars");
+            const bar = document.getElementById("ratingBar");
+            const CIRC = 339.29;
 
-
-            const count =
-                document.getElementById(
-                    "reviewCount"
-                );
-
-
-            const average =
-                document.getElementById(
-                    "averageRating"
-                );
-
-
-            const averageStars =
-                document.getElementById(
-                    "averageStars"
-                );
-
-
-            count.textContent =
-                reviews.length +
-                (
-                    reviews.length === 1
-                        ? " review"
-                        : " reviews"
-                );
-
+            count.textContent = reviews.length + (reviews.length === 1 ? " review" : " reviews");
 
             if (reviews.length === 0) {
-
-                average.textContent =
-                    "0.0";
-
-                averageStars.textContent =
-                    "☆☆☆☆☆";
-
-                list.innerHTML = "";
-
+                average.textContent = "0.0";
+                averageStars.textContent = "☆☆☆☆☆";
+                bar.style.strokeDashoffset = CIRC;
                 return;
-
             }
 
+            const avg = reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length;
+            average.textContent = avg.toFixed(1);
+            averageStars.textContent = "★".repeat(Math.round(avg)) + "☆".repeat(5 - Math.round(avg));
+            bar.style.strokeDashoffset = CIRC * (1 - avg / 5);
+        }
 
-            const total =
-                reviews.reduce(
-                    (sum, review) =>
-                        sum + review.rating,
-                    0
-                );
+        function displayReviews() {
+            const reviews = getReviews();
+            const list = document.getElementById("reviewsList");
 
-
-            const avg =
-                total / reviews.length;
-
-
-            average.textContent =
-                avg.toFixed(1);
-
-
-            const rounded =
-                Math.round(avg);
-
-
-            averageStars.textContent =
-                "★".repeat(rounded) +
-                "☆".repeat(5 - rounded);
-
+            updateRatingDisplay(reviews);
 
             list.innerHTML = "";
 
+            if (reviews.length === 0) {
+                const empty = document.createElement("div");
+                empty.className = "empty-reviews";
+                empty.textContent = "No reviews yet — be the first to share your experience.";
+                list.appendChild(empty);
+                return;
+            }
 
-            reviews
-                .slice()
-                .reverse()
-                .forEach(review => {
+            reviews.slice().reverse().forEach((review) => {
+                const card = document.createElement("div");
+                card.className = "review-card";
+                card.innerHTML = "\u200b"; // force layout, avoid empty
 
-                    const card =
-                        document.createElement(
-                            "div"
-                        );
+                const avatar = document.createElement("div");
+                avatar.className = "review-avatar";
+                avatar.style.background = avatarColor(review.name || "?");
+                avatar.textContent = initials(review.name || "?");
 
-                    card.className =
-                        "review-card";
+                const body = document.createElement("div");
+                body.className = "review-body";
 
+                const nameEl = document.createElement("strong");
+                nameEl.textContent = review.name;
 
-                    const name =
-                        document.createElement(
-                            "strong"
-                        );
+                const meta = document.createElement("div");
+                meta.className = "meta";
 
-                    name.textContent =
-                        review.name;
+                const stars = document.createElement("span");
+                stars.className = "review-stars";
+                stars.textContent = "★".repeat(review.rating) + "☆".repeat(5 - review.rating);
 
+                const date = document.createElement("span");
+                date.className = "date";
+                date.textContent = review.date ? formatDate(review.date) : "";
 
-                    const stars =
-                        document.createElement(
-                            "div"
-                        );
+                meta.appendChild(stars);
+                meta.appendChild(date);
 
-                    stars.className =
-                        "review-stars";
+                const text = document.createElement("p");
+                text.textContent = review.text;
 
+                body.appendChild(nameEl);
+                body.appendChild(meta);
+                body.appendChild(text);
 
-                    stars.textContent =
-                        "★".repeat(
-                            review.rating
-                        ) +
-                        "☆".repeat(
-                            5 - review.rating
-                        );
-
-
-                    const text =
-                        document.createElement(
-                            "p"
-                        );
-
-                    text.textContent =
-                        review.text;
-
-
-                    card.appendChild(name);
-
-                    card.appendChild(stars);
-
-                    card.appendChild(text);
-
-
-                    list.appendChild(card);
-
-                });
-
+                card.appendChild(avatar);
+                card.appendChild(body);
+                list.appendChild(card);
+            });
         }
 
+        document.getElementById("reviewForm").addEventListener("submit", function (event) {
+            event.preventDefault();
 
-        document
-            .getElementById("reviewForm")
-            .addEventListener(
-                "submit",
-                function(event) {
+            if (selectedRating === 0) {
+                showToast("Please select a star rating first.");
+                return;
+            }
 
-                    event.preventDefault();
+            const name = document.getElementById("reviewName").value.trim();
+            const text = document.getElementById("reviewText").value.trim();
 
+            if (!name || !text) {
+                showToast("Please fill in your name and review.");
+                return;
+            }
 
-                    if (selectedRating === 0) {
+            const reviews = getReviews();
+            reviews.push({
+                name: name,
+                rating: selectedRating,
+                text: text,
+                date: new Date().toISOString()
+            });
 
-                        alert(
-                            "Please select a rating first."
-                        );
-
-                        return;
-
-                    }
-
-
-                    const name =
-                        document
-                            .getElementById(
-                                "reviewName"
-                            )
-                            .value
-                            .trim();
-
-
-                    const text =
-                        document
-                            .getElementById(
-                                "reviewText"
-                            )
-                            .value
-                            .trim();
-
-
-                    if (!name || !text) {
-
-                        alert(
-                            "Please fill in your name and review."
-                        );
-
-                        return;
-
-                    }
-
-
-                    const reviews =
-                        getReviews();
-
-
-                    reviews.push({
-
-                        name: name,
-
-                        rating:
-                            selectedRating,
-
-                        text: text,
-
-                        date:
-                            new Date()
-                                .toISOString()
-
-                    });
-
-
-                    saveReviews(
-                        reviews
-                    );
-
-
-                    this.reset();
-
-
-                    selectedRating = 0;
-
-
-                    starButtons.forEach(
-                        star =>
-                            star.classList.remove(
-                                "active"
-                            )
-                    );
-
-
-                    displayReviews();
-
-
-                    playClickSound();
-
-
-                    alert(
-                        "Thank you for your review!"
-                    );
-
-                }
-            );
-
+            saveReviews(reviews);
+            this.reset();
+            selectedRating = 0;
+            starButtons.forEach((star) => star.classList.remove("active"));
+            displayReviews();
+            playClickSound();
+            showToast("Thank you for your review! ✦");
+        });
 
         displayReviews();
-
     </script>
 
 </body>
